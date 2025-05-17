@@ -14,13 +14,12 @@ i18n
 
         detection: {
             order: ['localStorage'],
-            caches: ['localStorage']
+            caches: ['localStorage'],
         },
 
         interpolation: {
             escapeValue: false,
-        }
+        },
     });
-
 
 export default i18n;
