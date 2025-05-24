@@ -1,6 +1,10 @@
 {
+  "": "",
   "About page": "About page",
+  "An unexpected error occurred": "An unexpected error occurred",
   "Language": "Language",
   "Main page": "Main page",
-  "Page Not Found": "Page Not Found"
+  "Page Not Found": "Page Not Found",
+  "Refresh page": "Refresh page",
+  "throw error": "throw error"
 }

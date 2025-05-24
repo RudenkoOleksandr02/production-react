@@ -1,5 +1,8 @@
 {
   "Translate": "Переклад",
   "Language": "Українська",
-  "Page Not Found": "Сторінку не знайдено"
+  "Page Not Found": "Сторінку не знайдено",
+  "An unexpected error occurred": "Сталася непередбачена помилка",
+  "Refresh page": "Оновити сторінку",
+  "throw error": "помилка викиду"
 }
