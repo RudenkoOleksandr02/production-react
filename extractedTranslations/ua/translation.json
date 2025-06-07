@@ -4,10 +4,17 @@
   "About page": "About page",
   "An unexpected error occurred": "An unexpected error occurred",
   "Language": "Language",
+  "Login": "Login",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Amet animi autem, consectetur corporis dolore enim, eos eveniet facilis inventore, ipsum laboriosam quae quasi voluptatibus? Incidunt nostrum officia sapiente sunt voluptate": {
+      "": ""
+    }
+  },
   "Main": "Main",
   "Main page": "Main page",
   "Page Not Found": "Page Not Found",
   "Refresh page": "Refresh page",
+  "Short language": "Short language",
   "Throw error": "Throw error",
   "Toggle": "Toggle",
   "throw error": "throw error"
