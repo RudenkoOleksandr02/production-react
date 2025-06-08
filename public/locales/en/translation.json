@@ -9,5 +9,7 @@
   "About": "About",
   "Toggle": "Toggle",
   "Short language": "EN",
-  "Login": "Login"
+  "Login": "Login",
+  "increment": "increment",
+  "decrement": "decrement"
 }
