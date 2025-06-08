@@ -9,5 +9,7 @@
   "About": "Про сайт",
   "Toggle": "Переключити",
   "Short language": "UA",
-  "Login": "Увійти"
+  "Login": "Увійти",
+  "increment": "increment",
+  "decrement": "decrement"
 }
