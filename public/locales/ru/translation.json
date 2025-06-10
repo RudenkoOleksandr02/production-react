@@ -11,5 +11,7 @@
   "Short language": "RU",
   "Login": "Войти",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Enter username": "Введите username",
+  "Enter password": "Введите password"
 }

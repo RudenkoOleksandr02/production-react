@@ -11,5 +11,7 @@
   "Short language": "UA",
   "Login": "Увійти",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Enter username": "Введіть username",
+  "Enter password": "Введіть password"
 }
