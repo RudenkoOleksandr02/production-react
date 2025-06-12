@@ -3,10 +3,12 @@
   "About": "About",
   "About page": "About page",
   "An unexpected error occurred": "An unexpected error occurred",
+  "Authorization form": "Authorization form",
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Language": "Language",
   "Login": "Login",
+  "Logout": "Logout",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Amet animi autem, consectetur corporis dolore enim, eos eveniet facilis inventore, ipsum laboriosam quae quasi voluptatibus? Incidunt nostrum officia sapiente sunt voluptate": {
       "": ""
@@ -19,7 +21,9 @@
   "Short language": "",
   "Throw error": "Throw error",
   "Toggle": "Toggle",
+  "You have entered an incorrect login or password": "You have entered an incorrect login or password",
   "decrement": "decrement",
   "increment": "increment",
+  "login": "",
   "throw error": "throw error"
 }

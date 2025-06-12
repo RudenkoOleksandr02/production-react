@@ -13,5 +13,8 @@
   "increment": "increment",
   "decrement": "decrement",
   "Enter username": "Введіть username",
-  "Enter password": "Введіть password"
+  "Enter password": "Введіть password",
+  "Authorization form": "Форма авторизації",
+  "You have entered an incorrect login or password": "Ви ввели неправильний логін або пароль",
+  "Logout": "Вийти"
 }
