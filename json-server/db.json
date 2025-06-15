@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Саша",
+    "lastname": "Руденко",
+    "age": 23,
+    "currency": "UAH",
+    "country": "Ukraine",
+    "city": "Obukhiv",
+    "username": "admin",
+    "avatar": "https://img.freepik.com/free-vector/illustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
+  }
 }

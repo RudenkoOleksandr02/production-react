@@ -27,3 +27,6 @@ export function createReduxStore(
 
     return store;
 }
+
+// создаю тип для dispatch, чтоб обращаться к полям диспатченного экшена (types, meta, payload)
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];
