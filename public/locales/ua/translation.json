@@ -17,5 +17,7 @@
   "Authorization form": "Форма авторизації",
   "You have entered an incorrect login or password": "Ви ввели неправильний логін або пароль",
   "Logout": "Вийти",
-  "Profile": "Профіль"
+  "Profile": "Профіль",
+  "Select currency": "Виберіть валюту",
+  "Select country": "Виберіть країну"
 }

@@ -3,5 +3,13 @@
   "Profile": "Профіль",
   "Edit": "Редагувати",
   "First name": "ім'я",
-  "Last name": "Прізвище"
+  "Last name": "Прізвище",
+  "There was an error loading your profile": "Сталася помилка під час завантаження вашого профілю",
+  "Try refreshing the page": "Спробуйте оновити сторінку",
+  "Cancel": "Скасувати",
+  "Save": "Зберегти",
+  "Age": "Вік",
+  "City": "Місто",
+  "Username": "Ім'я користувача",
+  "Avatar": "Аватар"
 }
