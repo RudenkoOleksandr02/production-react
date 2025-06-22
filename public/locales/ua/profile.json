@@ -11,5 +11,14 @@
   "Age": "Вік",
   "City": "Місто",
   "Username": "Ім'я користувача",
-  "Avatar": "Аватар"
+  "Avatar": "Аватар",
+  "First and last name are required": "Ім'я та прізвище обов'язкові",
+  "Incorrect age": "Неправильний вік",
+  "Incorrect country": "Неправильна країна",
+  "Incorrect currency": "Неправильна валюта",
+  "Incorrect city": "Неправильне місто",
+  "Incorrect avatar": "Неправильний аватар",
+  "Incorrect username": "Невірне ім'я користувача",
+  "Data not provided": "Дані не надано",
+  "Server error while saving": "Помилка сервера під час збереження"
 }

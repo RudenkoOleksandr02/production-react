@@ -11,5 +11,14 @@
   "Age": "Age",
   "City": "City",
   "Username": "Username",
-  "Avatar": "Avatar"
+  "Avatar": "Avatar",
+  "First and last name are required": "First and last name are required",
+  "Incorrect age": "Incorrect age",
+  "Incorrect country": "Incorrect country",
+  "Incorrect currency": "Incorrect currency",
+  "Incorrect city": "Incorrect city",
+  "Incorrect avatar": "Incorrect avatar",
+  "Incorrect username": "Incorrect username",
+  "Data not provided": "Data not provided",
+  "Server error while saving": "Server error while saving"
 }

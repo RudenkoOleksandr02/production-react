@@ -11,5 +11,14 @@
   "Age": "Возраст",
   "City": "Город",
   "Username": "Имя пользователя",
-  "Avatar": "Аватар"
+  "Avatar": "Аватар",
+  "First and last name are required": "Обязательно укажите имя и фамилию",
+  "Incorrect age": "Неправильный возраст",
+  "Incorrect country": "Неверная страна",
+  "Incorrect currency": "Неправильная валюта",
+  "Incorrect city": "Неправильный город",
+  "Incorrect avatar": "Неправильный аватар",
+  "Incorrect username": "Неправильное имя пользователя",
+  "Data not provided": "Данные не предоставлены",
+  "Server error while saving": "Ошибка сервера при сохранении"
 }
