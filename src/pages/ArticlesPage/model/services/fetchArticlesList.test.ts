@@ -1,21 +1,6 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
-import {
-    Article, ArticleBlockType, ArticleType, ArticleView,
-} from 'entities/Article';
-import ArticlesPage from './ArticlesPage';
-
-export default {
-    title: 'pages/ArticlesPage',
-    component: ArticlesPage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof ArticlesPage>;
-
-const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {...args} />;
+import { Article, ArticleType, ArticleBlockType } from 'entities/Article';
+import { TestAsyncThunk } from 'shared/config/tests/TestAsyncThunk';
+import { fetchArticlesList } from './fetchArticlesList';
 
 const articles: Article[] = [
     {
@@ -29,7 +14,6 @@ const articles: Article[] = [
         user: {
             id: '1',
             username: 'user',
-            avatar: 'https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg',
         },
         blocks: [
             {
@@ -69,7 +53,6 @@ const articles: Article[] = [
         user: {
             id: '1',
             username: 'user',
-            avatar: 'https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg',
         },
         blocks: [
             {
@@ -100,28 +83,23 @@ const articles: Article[] = [
     },
 ];
 
-export const Small = Template.bind({});
-Small.args = {};
-Small.decorators = [StoreDecorator({
-    articlesPage: {
-        view: ArticleView.SMALL,
-        entities: {
-            1: articles[0],
-            2: articles[1],
-        },
-        ids: ['1', '2'],
-    },
-})];
+describe('fetchArticlesList.test', () => {
+    test('success', async () => {
+        const thunk = new TestAsyncThunk(fetchArticlesList);
+        thunk.api.get.mockReturnValue(Promise.resolve({ data: articles }));
 
-export const Big = Template.bind({});
-Big.args = {};
-Big.decorators = [StoreDecorator({
-    articlesPage: {
-        view: ArticleView.BIG,
-        entities: {
-            1: articles[0],
-            2: articles[1],
-        },
-        ids: ['1', '2'],
-    },
-})];
+        const result = await thunk.callThunk();
+
+        expect(thunk.api.get).toBeCalled();
+        expect(result.meta.requestStatus).toBe('fulfilled');
+        expect(result.payload).toEqual(articles);
+    });
+    test('error', async () => {
+        const thunk = new TestAsyncThunk(fetchArticlesList);
+        thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
+
+        const result = await thunk.callThunk();
+
+        expect(result.meta.requestStatus).toBe('rejected');
+    });
+});
