@@ -85,20 +85,28 @@ const articles: Article[] = [
 
 describe('fetchArticlesList.test', () => {
     test('success', async () => {
-        const thunk = new TestAsyncThunk(fetchArticlesList);
+        const thunk = new TestAsyncThunk(fetchArticlesList, {
+            articlesPage: {
+                limit: 9,
+            },
+        });
         thunk.api.get.mockReturnValue(Promise.resolve({ data: articles }));
 
-        const result = await thunk.callThunk();
+        const result = await thunk.callThunk({ page: 1 });
 
         expect(thunk.api.get).toBeCalled();
         expect(result.meta.requestStatus).toBe('fulfilled');
         expect(result.payload).toEqual(articles);
     });
     test('error', async () => {
-        const thunk = new TestAsyncThunk(fetchArticlesList);
+        const thunk = new TestAsyncThunk(fetchArticlesList, {
+            articlesPage: {
+                limit: 9,
+            },
+        });
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
 
-        const result = await thunk.callThunk();
+        const result = await thunk.callThunk({ page: 1 });
 
         expect(result.meta.requestStatus).toBe('rejected');
     });

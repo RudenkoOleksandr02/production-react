@@ -1,7 +1,7 @@
 import { Article, ArticleType, ArticleView } from 'entities/Article';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { ArticleBlockType } from 'entities/Article/model/types/article';
-import { fetchArticlesList } from '../services/fetchArticlesList';
+import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { articlesPageActions, articlesPageReducer } from './articlesPageSlice';
 
@@ -14,14 +14,22 @@ describe('articlesPageSlice.test', () => {
         expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
             .setView(ArticleView.BIG))).toEqual({ view: ArticleView.BIG });
     });
+    test('test set page', () => {
+        const state: DeepPartial<ArticlesPageSchema> = {
+            page: 2,
+        };
+        expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
+            .setPage(3))).toEqual({ page: 3 });
+    });
     test('test init view', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
             view: ArticleView.BIG,
+            limit: 4,
         };
         localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, ArticleView.SMALL);
 
         expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
-            .initView())).toEqual({ view: ArticleView.SMALL });
+            .initView())).toEqual({ view: ArticleView.SMALL, limit: 9 });
     });
     test('test fetch articles list pending', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
@@ -39,6 +47,7 @@ describe('articlesPageSlice.test', () => {
             isLoading: true,
             entities: {},
             ids: [],
+            hasMore: true,
         };
         const articles: Article[] = [
             {
@@ -122,13 +131,14 @@ describe('articlesPageSlice.test', () => {
         ];
 
         expect(articlesPageReducer(state as ArticlesPageSchema, fetchArticlesList
-            .fulfilled(articles, ''))).toEqual({
+            .fulfilled(articles, '', { page: 1 }))).toEqual({
             entities: {
                 1: articles[0],
                 2: articles[1],
             },
             ids: ['1', '2'],
             isLoading: false,
+            hasMore: true,
         });
     });
 });
