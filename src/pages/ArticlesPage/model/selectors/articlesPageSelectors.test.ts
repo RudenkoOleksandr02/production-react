@@ -1,7 +1,7 @@
 import { StateSchema } from 'app/providers/StoreProvider';
 import { ArticleView } from 'entities/Article';
 import {
-    getArticlesPageError, getArticlesPageHasMore,
+    getArticlesPageError, getArticlesPageHasMore, getArticlesPageInited,
     getArticlesPageIsLoading, getArticlesPageLimit,
     getArticlesPageNum,
     getArticlesPageView,
@@ -56,6 +56,14 @@ describe('articlesPageSelectors.test', () => {
         };
         expect(getArticlesPageLimit(state as StateSchema)).toEqual(4);
     });
+    test('should return inited', () => {
+        const state: DeepPartial<StateSchema> = {
+            articlesPage: {
+                _inited: true,
+            },
+        };
+        expect(getArticlesPageInited(state as StateSchema)).toEqual(true);
+    });
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
 
@@ -65,5 +73,6 @@ describe('articlesPageSelectors.test', () => {
         expect(getArticlesPageNum(state as StateSchema)).toEqual(1);
         expect(getArticlesPageLimit(state as StateSchema)).toEqual(9);
         expect(getArticlesPageHasMore(state as StateSchema)).toEqual(false);
+        expect(getArticlesPageInited(state as StateSchema)).toEqual(false);
     });
 });

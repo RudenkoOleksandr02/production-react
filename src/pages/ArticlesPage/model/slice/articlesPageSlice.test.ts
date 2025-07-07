@@ -21,15 +21,16 @@ describe('articlesPageSlice.test', () => {
         expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
             .setPage(3))).toEqual({ page: 3 });
     });
-    test('test init view', () => {
+    test('test init state', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
             view: ArticleView.BIG,
             limit: 4,
+            _inited: false,
         };
         localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, ArticleView.SMALL);
 
         expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
-            .initView())).toEqual({ view: ArticleView.SMALL, limit: 9 });
+            .initState())).toEqual({ view: ArticleView.SMALL, limit: 9, _inited: true });
     });
     test('test fetch articles list pending', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
