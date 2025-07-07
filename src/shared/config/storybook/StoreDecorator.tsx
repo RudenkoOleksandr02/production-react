@@ -7,6 +7,7 @@ import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetai
 import { addCommentFormReducer } from 'features/AddCommentForm/model/slice/addCommentFormSlice';
 import { articleDetailsCommentsReducer } from 'pages/ArticleDetailsPage/model/slice/articleDetailsCommentsSlice';
 import { articlesPageReducer } from 'pages/ArticlesPage/model/slice/articlesPageSlice';
+import { routeScrollReducer } from 'widgets/Page';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
@@ -15,6 +16,7 @@ const defaultAsyncReducers: ReducersList = {
     addCommentForm: addCommentFormReducer,
     articleDetailsComments: articleDetailsCommentsReducer,
     articlesPage: articlesPageReducer,
+    routeScroll: routeScrollReducer,
 };
 
 export const StoreDecorator = (
