@@ -23,5 +23,18 @@
   "Comments not found": "Комментарии не найдены",
   "Enter comment text": "Введите текст комментария",
   "Send": "Отправить",
-  "Read more": "Читать далее"
+  "Read more": "Читать далее",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "By": "By",
+  "increasing": "increasing",
+  "descending": "descending",
+  "creation date": "creation date",
+  "views": "views",
+  "title": "title",
+  "All": "All",
+  "Economics": "Economics",
+  "Science": "Science",
+  "IT": "IT",
+  "Articles not found": "Articles not found"
 }

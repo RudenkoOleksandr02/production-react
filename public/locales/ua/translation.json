@@ -23,5 +23,18 @@
   "Comments not found": "Коментарі не знайдено",
   "Enter comment text": "Введіть текст коментаря",
   "Send": "Надіслати",
-  "Read more": "Читати далі"
+  "Read more": "Читати далі",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "By": "By",
+  "increasing": "increasing",
+  "descending": "descending",
+  "creation date": "creation date",
+  "views": "views",
+  "title": "title",
+  "All": "All",
+  "Economics": "Economics",
+  "Science": "Science",
+  "IT": "IT",
+  "Articles not found": "Articles not found"
 }

@@ -1,9 +1,9 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { ArticleView } from 'entities/Article';
+import { ArticleSortField, ArticleType, ArticleView } from 'entities/Article';
 import {
     getArticlesPageError, getArticlesPageHasMore, getArticlesPageInited,
     getArticlesPageIsLoading, getArticlesPageLimit,
-    getArticlesPageNum,
+    getArticlesPageNum, getArticlesPageOrder, getArticlesPageSearch, getArticlesPageSort, getArticlesPageType,
     getArticlesPageView,
 } from './articlesPageSelectors';
 
@@ -64,6 +64,38 @@ describe('articlesPageSelectors.test', () => {
         };
         expect(getArticlesPageInited(state as StateSchema)).toEqual(true);
     });
+    test('should return sort field created', () => {
+        const state: DeepPartial<StateSchema> = {
+            articlesPage: {
+                sort: ArticleSortField.CREATED,
+            },
+        };
+        expect(getArticlesPageSort(state as StateSchema)).toEqual(ArticleSortField.CREATED);
+    });
+    test('should return order asc', () => {
+        const state: DeepPartial<StateSchema> = {
+            articlesPage: {
+                order: 'asc',
+            },
+        };
+        expect(getArticlesPageOrder(state as StateSchema)).toEqual('asc');
+    });
+    test('should return search text', () => {
+        const state: DeepPartial<StateSchema> = {
+            articlesPage: {
+                search: 'text',
+            },
+        };
+        expect(getArticlesPageSearch(state as StateSchema)).toEqual('text');
+    });
+    test('should return type IT', () => {
+        const state: DeepPartial<StateSchema> = {
+            articlesPage: {
+                type: ArticleType.IT,
+            },
+        };
+        expect(getArticlesPageType(state as StateSchema)).toEqual(ArticleType.IT);
+    });
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
 
@@ -74,5 +106,9 @@ describe('articlesPageSelectors.test', () => {
         expect(getArticlesPageLimit(state as StateSchema)).toEqual(9);
         expect(getArticlesPageHasMore(state as StateSchema)).toEqual(false);
         expect(getArticlesPageInited(state as StateSchema)).toEqual(false);
+        expect(getArticlesPageSort(state as StateSchema)).toEqual(ArticleSortField.CREATED);
+        expect(getArticlesPageOrder(state as StateSchema)).toEqual('asc');
+        expect(getArticlesPageSearch(state as StateSchema)).toEqual('');
+        expect(getArticlesPageType(state as StateSchema)).toEqual(ArticleType.ALL);
     });
 });

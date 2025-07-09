@@ -1,4 +1,6 @@
-import { Article, ArticleType, ArticleBlockType } from 'entities/Article';
+import {
+    Article, ArticleType, ArticleBlockType, ArticleSortField,
+} from 'entities/Article';
 import { TestAsyncThunk } from 'shared/config/tests/TestAsyncThunk';
 import { fetchArticlesList } from './fetchArticlesList';
 
@@ -87,12 +89,17 @@ describe('fetchArticlesList.test', () => {
     test('success', async () => {
         const thunk = new TestAsyncThunk(fetchArticlesList, {
             articlesPage: {
+                page: 1,
                 limit: 9,
+                sort: ArticleSortField.CREATED,
+                order: 'asc',
+                search: '',
+                type: ArticleType.ALL,
             },
         });
         thunk.api.get.mockReturnValue(Promise.resolve({ data: articles }));
 
-        const result = await thunk.callThunk({ page: 1 });
+        const result = await thunk.callThunk({});
 
         expect(thunk.api.get).toBeCalled();
         expect(result.meta.requestStatus).toBe('fulfilled');
@@ -106,7 +113,7 @@ describe('fetchArticlesList.test', () => {
         });
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
 
-        const result = await thunk.callThunk({ page: 1 });
+        const result = await thunk.callThunk({});
 
         expect(result.meta.requestStatus).toBe('rejected');
     });
