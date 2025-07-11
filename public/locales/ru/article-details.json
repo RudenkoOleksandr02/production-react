@@ -3,8 +3,8 @@
   "There was an error loading the article": "Произошла ошибка при загрузке статьи",
   "Comments": "Комментарии",
   "Back to list": "Вернуться к списку",
-  "Recommendations": "Recommendations",
-  "Edit": "Edit",
-  "Create article": "Create article",
-  "Edit article with ID = ": "Edit article with ID = "
+  "Recommendations": "Рекомендации",
+  "Edit": "Редактировать",
+  "Create article": "Создать статью",
+  "Edit article with ID = ": "Редактировать статью с ID ="
 }
