@@ -55,6 +55,7 @@ module.exports = {
                     'justify',
                     'align',
                     'gap',
+                    'role',
                 ],
             }],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
