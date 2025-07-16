@@ -56,6 +56,7 @@ module.exports = {
                     'align',
                     'gap',
                     'role',
+                    'as',
                 ],
             }],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
