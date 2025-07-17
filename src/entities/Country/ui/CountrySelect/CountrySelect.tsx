@@ -40,7 +40,7 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
             items={options}
             readonly={readonly}
             value={value}
-            direction="top"
+            direction="top right"
         />
     );
 });
