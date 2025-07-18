@@ -20,5 +20,6 @@
   "Incorrect avatar": "Неправильний аватар",
   "Incorrect username": "Невірне ім'я користувача",
   "Data not provided": "Дані не надано",
-  "Server error while saving": "Помилка сервера під час збереження"
+  "Server error while saving": "Помилка сервера під час збереження",
+  "Profile not found": "Profile not found"
 }

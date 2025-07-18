@@ -20,5 +20,6 @@
   "Incorrect avatar": "Incorrect avatar",
   "Incorrect username": "Incorrect username",
   "Data not provided": "Data not provided",
-  "Server error while saving": "Server error while saving"
+  "Server error while saving": "Server error while saving",
+  "Profile not found": "Profile not found"
 }

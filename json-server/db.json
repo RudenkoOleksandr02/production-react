@@ -546,6 +546,12 @@
       "userId": "1",
       "text": "22",
       "id": "p_x1yK4"
+    },
+    {
+      "articleId": "14",
+      "userId": "1",
+      "text": "123",
+      "id": "QB8R0ac"
     }
   ],
   "users": [
@@ -567,10 +573,10 @@
   "profile": [
     {
       "id": "1",
-      "first": "Саша",
-      "lastname": "Руденко",
+      "first": "Саша1",
+      "lastname": "Руденко2",
       "age": 23,
-      "currency": "UAH",
+      "currency": "USD",
       "country": "Ukraine",
       "city": "Обухов",
       "username": "admin123",
