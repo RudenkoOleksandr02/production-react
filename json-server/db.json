@@ -559,14 +559,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
     }
   ],
