@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
@@ -27,7 +27,7 @@ import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArt
 
 interface ArticleDetailsProps {
     className?: string;
-    id: string;
+    id?: string;
 }
 
 const reducers: ReducersList = {
@@ -85,11 +85,13 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     if (isLoading) {
         content = (
             <>
-                <Skeleton width={200} height={200} borderRadius="50%" className={cls.avatar} />
-                <Skeleton width={300} height={32} className={cls.title} />
-                <Skeleton width={600} height={24} className={cls.skeleton} />
-                <Skeleton width="100%" height={200} className={cls.skeleton} />
-                <Skeleton width="100%" height={200} className={cls.skeleton} />
+                <HStack max justify="center">
+                    <Skeleton width={200} height={200} borderRadius="50%" />
+                </HStack>
+                <Skeleton width={300} height={32} />
+                <Skeleton width={600} height={24} />
+                <Skeleton width="100%" height={200} />
+                <Skeleton width="100%" height={200} />
             </>
         );
     } else if (error) {
@@ -110,7 +112,6 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                 </HStack>
                 <VStack gap="4">
                     <Text
-                        className={cls.title}
                         title={article?.title}
                         text={article?.subtitle}
                         size={TextSize.L}

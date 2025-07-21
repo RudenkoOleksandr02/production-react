@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { ArticleDetails } from 'entities/Article';
 import { useParams } from 'react-router-dom';
@@ -24,29 +23,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const {
         className,
     } = props;
-    const { t } = useTranslation('article-details');
     const { id } = useParams<{id: string}>();
-
-    if (__PROJECT__ === 'storybook') {
-        return (
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <VStack gap="16" max>
-                    <ArticleDetailsPageHeader />
-                    <ArticleDetails id="1" />
-                    <ArticleRecommendationsList />
-                    <ArticleDetailsComments id="1" />
-                </VStack>
-            </Page>
-        );
-    }
-
-    if (!id) {
-        return (
-            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                {t('Article not found')}
-            </Page>
-        );
-    }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
