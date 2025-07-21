@@ -20,17 +20,19 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
 
     const cssLoader = buildCssLoader(isDev);
 
-    const typescriptLoader = {
+    /* const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
-    };
+    }; */
 
-    const babelLoader = buildBabelLoader(isDev);
+    const codeBabelLoader = buildBabelLoader({ isDev, isTsx: false });
+    const tsxCodeBabelLoader = buildBabelLoader({ isDev, isTsx: true });
 
     return [
-        babelLoader,
-        typescriptLoader,
+        codeBabelLoader,
+        tsxCodeBabelLoader,
+        /* typescriptLoader, */
         cssLoader,
         svgLoader,
         fileLoader,

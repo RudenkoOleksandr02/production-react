@@ -1,0 +1,23 @@
+{
+  "Age": "Age",
+  "Avatar": "Avatar",
+  "Cancel": "Cancel",
+  "City": "City",
+  "Data not provided": "Data not provided",
+  "Edit": "Edit",
+  "First and last name are required": "First and last name are required",
+  "First name": "First name",
+  "Incorrect age": "Incorrect age",
+  "Incorrect avatar": "Incorrect avatar",
+  "Incorrect city": "Incorrect city",
+  "Incorrect country": "Incorrect country",
+  "Incorrect currency": "Incorrect currency",
+  "Incorrect username": "Incorrect username",
+  "Last name": "Last name",
+  "Profile": "Profile",
+  "Save": "Save",
+  "Server error while saving": "Server error while saving",
+  "There was an error loading your profile": "There was an error loading your profile",
+  "Try refreshing the page": "Try refreshing the page",
+  "Username": "Username"
+}

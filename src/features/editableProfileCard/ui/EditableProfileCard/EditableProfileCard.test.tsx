@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 import { screen } from '@testing-library/react';
 import { $api } from 'shared/api/api';
 import { profileReducer } from '../../model/slice/profileSlice';
-import { EditableProfileCard } from './editableProfileCard';
+import { EditableProfileCard } from './EditableProfileCard';
 
 const profile: Profile = {
     id: '1',
