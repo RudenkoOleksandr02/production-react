@@ -10,8 +10,8 @@ import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { ProfileCard } from 'entities/Profile';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { ValidateProfileError } from '../../model/consts/consts';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
-import { ValidateProfileError } from '../../model/types/editableProfileCardSchema';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import {
     getProfileIsLoading,

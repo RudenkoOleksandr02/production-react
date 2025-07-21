@@ -28,5 +28,5 @@ Primary.args = {
         + '    },\n'
         + '} as ComponentMeta<typeof Code>;\n'
         + '\n'
-        + 'const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;',
+        + 'consts Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;',
 };

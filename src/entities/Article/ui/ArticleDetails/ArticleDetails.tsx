@@ -15,7 +15,8 @@ import { HStack, VStack } from 'shared/ui/Stack';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleBlock } from '../../model/types/article';
+import { ArticleBlockType } from '../../model/consts/consts';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
