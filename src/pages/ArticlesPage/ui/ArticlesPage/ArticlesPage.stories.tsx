@@ -3,12 +3,12 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
 import {
-    Article, ArticleBlockType, ArticleType, ArticleView,
+    Article, ArticleBlockType, ArticleSortField, ArticleType, ArticleView,
 } from 'entities/Article';
 import ArticlesPage from './ArticlesPage';
 
 export default {
-    title: 'pages/ArticlesPage/ArticlesPage',
+    title: 'pages/ArticlesPage',
     component: ArticlesPage,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -110,6 +110,14 @@ Small.decorators = [StoreDecorator({
             2: articles[1],
         },
         ids: ['1', '2'],
+        page: 1,
+        hasMore: false,
+        _inited: true,
+        limit: 9,
+        sort: ArticleSortField.CREATED,
+        search: '',
+        order: 'asc',
+        type: ArticleType.ALL,
     },
 })];
 

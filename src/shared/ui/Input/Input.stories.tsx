@@ -15,8 +15,8 @@ export default {
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
-export const Light = Template.bind({});
-Light.args = {
+export const Primary = Template.bind({});
+Primary.args = {
     value: 'value',
     placeholder: 'some placeholder',
 };
@@ -27,3 +27,10 @@ Dark.args = {
     placeholder: 'some placeholder',
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Orange = Template.bind({});
+Orange.args = {
+    value: 'value',
+    placeholder: 'some placeholder',
+};
+Orange.decorators = [ThemeDecorator(Theme.ORANGE)];

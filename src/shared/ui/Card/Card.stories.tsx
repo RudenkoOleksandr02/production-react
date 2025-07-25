@@ -1,5 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
 import { Text } from '../Text/Text';
 
 import { Card } from './Card';
@@ -18,3 +20,15 @@ export const Primary = Template.bind({});
 Primary.args = {
     children: <Text title="text" text="text text" />,
 };
+
+export const Dark = Template.bind({});
+Dark.args = {
+    children: <Text title="text" text="text text" />,
+};
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Orange = Template.bind({});
+Orange.args = {
+    children: <Text title="text" text="text text" />,
+};
+Orange.decorators = [ThemeDecorator(Theme.ORANGE)];

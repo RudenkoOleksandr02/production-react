@@ -26,3 +26,10 @@ Dark.args = {
     children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dicta fugiat modi non nostrum quae quidem quo sapiente sit ut! Blanditiis ea et expedita fugiat impedit repudiandae similique! Cupiditate eligendi est id ipsam molestias nesciunt, officia quibusdam repellendus similique! Adipisci amet aspernatur, culpa eum fugit itaque neque quae quis velit voluptas? Dolor doloribus eos error in ipsa itaque maiores, minima molestias nihil numquam quibusdam quis suscipit voluptates. Alias amet atque corporis cupiditate dignissimos dolor enim eum facilis hic, incidunt iste minima, molestias natus, necessitatibus nihil provident vitae. A, animi assumenda, corporis cupiditate distinctio facilis, incidunt ipsa minus molestiae nulla velit.',
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Orange = Template.bind({});
+Orange.args = {
+    isOpen: true,
+    children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi dicta fugiat modi non nostrum quae quidem quo sapiente sit ut! Blanditiis ea et expedita fugiat impedit repudiandae similique! Cupiditate eligendi est id ipsam molestias nesciunt, officia quibusdam repellendus similique! Adipisci amet aspernatur, culpa eum fugit itaque neque quae quis velit voluptas? Dolor doloribus eos error in ipsa itaque maiores, minima molestias nihil numquam quibusdam quis suscipit voluptates. Alias amet atque corporis cupiditate dignissimos dolor enim eum facilis hic, incidunt iste minima, molestias natus, necessitatibus nihil provident vitae. A, animi assumenda, corporis cupiditate distinctio facilis, incidunt ipsa minus molestiae nulla velit.',
+};
+Orange.decorators = [ThemeDecorator(Theme.ORANGE)];

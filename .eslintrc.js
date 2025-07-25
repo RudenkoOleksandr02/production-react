@@ -57,6 +57,7 @@ module.exports = {
                     'gap',
                     'role',
                     'as',
+                    'borderRadius',
                 ],
             }],
         'max-len': ['error', { ignoreComments: true, code: 120 }],

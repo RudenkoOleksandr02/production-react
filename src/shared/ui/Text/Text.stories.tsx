@@ -65,6 +65,33 @@ OnlyTextDark.args = {
 };
 OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const PrimaryOrange = Template.bind({});
+PrimaryOrange.args = {
+    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+};
+PrimaryOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
+
+export const ErrorOrange = Template.bind({});
+ErrorOrange.args = {
+    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    theme: TextTheme.ERROR,
+};
+ErrorOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
+
+export const OnlyTitleOrange = Template.bind({});
+OnlyTitleOrange.args = {
+    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+};
+OnlyTitleOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
+
+export const OnlyTextOrange = Template.bind({});
+OnlyTextOrange.args = {
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+};
+OnlyTextOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
+
 export const SizeL = Template.bind({});
 SizeL.args = {
     title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',

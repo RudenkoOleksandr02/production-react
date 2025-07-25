@@ -40,6 +40,13 @@
   "Incorrect username": "Incorrect username",
   "Language": "Language",
   "Last name": "Last name",
+  "Loading": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Login": "Login",
   "Logout": "Logout",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
