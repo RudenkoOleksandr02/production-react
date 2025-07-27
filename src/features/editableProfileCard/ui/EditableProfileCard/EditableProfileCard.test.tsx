@@ -36,7 +36,7 @@ const options = {
     },
 };
 
-jest.mock('axios');
+/* jest.mock('axios'); */
 
 describe('features/EditableProfileCard', () => {
     test('Режим рид онли должен переключиться', async () => {
