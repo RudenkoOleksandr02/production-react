@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
 import { Card, CardTheme } from '../Card/Card';
 import { Text } from '../Text/Text';
 
@@ -13,6 +14,11 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [(Story) => (
+        <AnimationProvider>
+            <Story />
+        </AnimationProvider>
+    )],
 } as ComponentMeta<typeof Drawer>;
 
 const children = (
