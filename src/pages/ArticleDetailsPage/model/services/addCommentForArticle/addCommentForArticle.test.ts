@@ -1,6 +1,6 @@
-import { TestAsyncThunk } from 'shared/config/tests/TestAsyncThunk';
-import { Comment } from 'entities/Comment';
-import { Article, ArticleBlockType, ArticleType } from 'entities/Article';
+import { TestAsyncThunk } from '@/shared/config/tests/TestAsyncThunk';
+import { Comment } from '@/entities/Comment';
+import { Article, ArticleBlockType, ArticleType } from '@/entities/Article';
 import { addCommentForArticle } from './addCommentForArticle';
 
 const comment: Comment = {

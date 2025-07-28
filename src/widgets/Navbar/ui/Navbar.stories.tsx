@@ -2,11 +2,11 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import withMock from 'storybook-addon-mock';
 
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
-import { Theme } from 'app/providers/ThemeProvider';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
-import { Notification } from 'entities/Notification/model/types/notification';
-import { Primary } from 'entities/Notification/ui/NotificationList/NotificationList.stories';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
+import { Notification } from '@/entities/Notification/model/types/notification';
+import { Primary } from '@/entities/Notification/ui/NotificationList/NotificationList.stories';
 import { Navbar } from './Navbar';
 import img from './storybook.png';
 

@@ -1,4 +1,4 @@
-import { Article, ArticleBlockType, ArticleType } from 'entities/Article';
+import { Article, ArticleBlockType, ArticleType } from '@/entities/Article';
 import { fetchArticleRecommendations } from '../../services/fetchArticleRecommendations/fetchArticleRecommendations';
 import { ArticleDetailsRecommendationsSchema } from '../../types/ArticleDetailsRecommendationsSchema';
 import { articleDetailsPageRecommendationsReducer } from './articleDetailsPageRecommendationsSlice';

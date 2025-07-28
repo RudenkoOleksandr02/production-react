@@ -1,4 +1,4 @@
-import { StateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { getRouteScroll, getRouteScrollByPath } from './routeScrollSelectors';
 
 describe('routeScrollSelectors.test', () => {

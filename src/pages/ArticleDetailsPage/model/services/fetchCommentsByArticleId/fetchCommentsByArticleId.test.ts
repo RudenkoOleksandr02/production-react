@@ -1,5 +1,5 @@
-import { TestAsyncThunk } from 'shared/config/tests/TestAsyncThunk';
-import { Comment } from 'entities/Comment';
+import { TestAsyncThunk } from '@/shared/config/tests/TestAsyncThunk';
+import { Comment } from '@/entities/Comment';
 import { fetchCommentsByArticleId } from './fetchCommentsByArticleId';
 
 const comments: Comment[] = [
