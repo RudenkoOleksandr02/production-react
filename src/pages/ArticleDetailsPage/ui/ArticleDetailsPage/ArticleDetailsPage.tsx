@@ -26,10 +26,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     } = props;
     const { id } = useParams<{id: string}>();
 
-    if (!id) {
-        return null;
-    }
-
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>

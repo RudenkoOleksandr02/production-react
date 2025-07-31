@@ -8,7 +8,7 @@ import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 
 export interface ProfileRatingProps {
     className?: string;
-    profileId: string;
+    profileId?: string;
 }
 
 const ProfileRating = memo((props: ProfileRatingProps) => {
@@ -18,14 +18,14 @@ const ProfileRating = memo((props: ProfileRatingProps) => {
     } = props;
     const { t } = useTranslation();
     const authData = useSelector(getUserAuthData);
-    const { data, isLoading } = useGetProfileRating({ userId: authData?.id ?? '', profileId });
+    const { data, isLoading } = useGetProfileRating({ userId: authData?.id ?? '', profileId: profileId ?? '' });
     const [rateProfileMutation] = useRateProfile();
 
     const handleRateProfile = useCallback((rate: number, feedback?: string) => {
         try {
             rateProfileMutation({
                 userId: authData?.id ?? '',
-                profileId,
+                profileId: profileId ?? '',
                 rate,
                 feedback,
             });

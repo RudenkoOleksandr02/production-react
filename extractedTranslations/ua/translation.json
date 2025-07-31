@@ -15,6 +15,7 @@
   "By": "By",
   "Cancel": "Cancel",
   "City": "City",
+  "Close": "Close",
   "Comments": "Comments",
   "Comments not found": "Comments not found",
   "Create article": "Create article",
@@ -40,6 +41,8 @@
   "Incorrect username": "Incorrect username",
   "Language": "Language",
   "Last name": "Last name",
+  "Leave your feedback about the article, it will help us improve": "Leave your feedback about the article, it will help us improve",
+  "Leave your feedback about the profile": "Leave your feedback about the profile",
   "Loading": {
     "": {
       "": {
@@ -60,6 +63,8 @@
   "Profile": "Profile",
   "Profile not found": "Profile not found",
   "Profile page": "Profile page",
+  "Rate the article": "Rate the article",
+  "Rate the profile": "Rate the profile",
   "Read more": "Read more",
   "Recommendations": "Recommendations",
   "Refresh page": "Refresh page",
@@ -73,6 +78,7 @@
   "Server error while saving": "Server error while saving",
   "Short language": "Short language",
   "Sort by": "Sort by",
+  "Thanks for the rate": "Thanks for the rate",
   "There was an error loading the article": "There was an error loading the article",
   "There was an error loading your profile": "There was an error loading your profile",
   "Throw error": "Throw error",
@@ -81,6 +87,7 @@
   "Username": "Username",
   "You do not have access to this page": "You do not have access to this page",
   "You have entered an incorrect login or password": "You have entered an incorrect login or password",
+  "Your review": "Your review",
   "creation date": "creation date",
   "decrement": "decrement",
   "descending": "descending",
@@ -90,12 +97,5 @@
   "search": "search",
   "throw error": "throw error",
   "title": "title",
-  "views": "views",
-  "Your review": "Your review",
-  "Close": "Close",
-  "Rate the article": "Rate the article",
-  "Leave your feedback about the article, it will help us improve": "Leave your feedback about the article, it will help us improve",
-  "Thanks for the rate": "Thanks for the rate",
-  "Rate the profile": "Rate the profile",
-  "Leave your feedback about the profile": "Leave your feedback about the profile"
+  "views": "views"
 }

@@ -10,12 +10,11 @@ export default ({ config }: {config: webpack.Configuration}) => {
         entry: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
     };
-    config!.resolve!.modules = [paths.src, ...(config!.resolve!.modules || [])];
+    config!.resolve!.modules?.push(paths.src);
     config!.resolve!.extensions!.push('.ts', '.tsx');
-
     config!.resolve!.alias = {
-        ...(config!.resolve!.alias || {}),
-        'entities/': path.resolve(__dirname, '../../src/entities/'),
+        ...config!.resolve!.alias,
+        '@': paths.src,
     };
 
     config!.module!.rules!.push(buildCssLoader(true));
