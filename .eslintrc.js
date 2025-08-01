@@ -69,7 +69,10 @@ module.exports = {
         'no-undef': 'off',
         'arrow-body-style': 'off',
         '@sashar/fsd-paths/path-checker': ['error', { alias: '@' }],
-        '@sashar/fsd-paths/public-api-imports': ['error', { alias: '@' }],
+        '@sashar/fsd-paths/public-api-imports': ['error', {
+            alias: '@',
+            testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+        }],
         'react/no-array-index-key': 'off',
     },
     globals: {
