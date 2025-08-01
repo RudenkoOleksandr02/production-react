@@ -22,7 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'production-react',
+        '@sashar/fsd-paths',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -68,7 +68,8 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'arrow-body-style': 'off',
-        'production-react/path-checker': ['error', { alias: '@' }],
+        '@sashar/fsd-paths/path-checker': ['error', { alias: '@' }],
+        '@sashar/fsd-paths/public-api-imports': ['error', { alias: '@' }],
         'react/no-array-index-key': 'off',
     },
     globals: {
