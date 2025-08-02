@@ -1,10 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import Svg from './profile-20-20.svg';
 
 import { Icon } from './Icon';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'shared/Icon',

@@ -5,7 +5,7 @@ import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/Dynami
 import { articleDetailsReducer } from '@/entities/Article/testing';
 import { addCommentFormReducer } from '@/features/AddCommentForm/testing';
 import { articlesPageReducer } from '@/pages/ArticlesPage/testing';
-import { routeScrollReducer } from '@/widgets/Page';
+import { routeScrollReducer } from '@/widgets/Page/testing';
 import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
 import { profileReducer } from '@/features/editableProfileCard/testing';
 

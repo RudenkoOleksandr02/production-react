@@ -1,12 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
-import { Theme } from '@/app/providers/ThemeProvider';
 import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
 import { Card, CardTheme } from '../Card/Card';
 import { Text } from '../Text/Text';
 
 import { Drawer } from './Drawer';
+import { Theme } from '@/shared/const/theme';
 
 export default {
     title: 'shared/Drawer',
