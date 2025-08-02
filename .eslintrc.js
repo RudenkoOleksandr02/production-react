@@ -23,6 +23,7 @@ module.exports = {
         'i18next',
         'react-hooks',
         '@sashar/fsd-paths',
+        'unused-imports',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -78,6 +79,7 @@ module.exports = {
             ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
         }],
         'react/no-array-index-key': 'off',
+        'unused-imports/no-unused-imports': 'error',
     },
     globals: {
         __IS_DEV__: true,
