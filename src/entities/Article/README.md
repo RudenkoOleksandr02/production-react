@@ -7,8 +7,6 @@ The "Article" entity encapsulates all logic related to loading, storing, and dis
 * **Components**
   * `ArticleDetails` — component for displaying detailed information about an article (title, author, date, content).
   * `ArticleList` — component for rendering a list of article previews with titles and short descriptions.
-  * `ArticleSortSelector` — dropdown selector for choosing how to sort the list of articles (by date, views, etc.).
-  * `ArticleTypeTabs` — tab navigation for filtering articles by type (IT, Science, Politics, etc.).
 
 * **Types & Enums**
   * `Article` — interface describing article fields: `id`, `title`, `subtitle`, `img`, `views`, `createdAt`, `type`, `blocks`, etc.
