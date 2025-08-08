@@ -7,7 +7,7 @@ import { Dropdown } from '@/shared/ui/Popups';
 import {
     getUserAuthData, isUserAdmin, isUserManager, userActions,
 } from '@/entities/User';
-import { gerRouteAdminPanel, gerRouteProfile } from '@/shared/const/router';
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 
 interface AvatarDropdownProps {
     className?: string;
@@ -39,9 +39,9 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
             direction="bottom left"
             items={[
                 ...(isAdminPanelAvailable ? [
-                    { content: t('Admin panel'), href: gerRouteAdminPanel() },
+                    { content: t('Admin panel'), href: getRouteAdminPanel() },
                 ] : []),
-                { content: t('Profile'), href: gerRouteProfile(authData.id) },
+                { content: t('Profile'), href: getRouteProfile(authData.id) },
                 { content: t('Logout'), onClick: onLogout },
             ]}
             trigger={<Avatar fallbackInverted src={authData.avatar} size={30} />}

@@ -12,8 +12,9 @@ import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
 import { getRouteScrollByPath } from '../model/selectors/routeScrollSelectors';
 import cls from './Page.module.scss';
 import { routeScrollActions } from '../model/slice/routeScrollSlice';
+import { TestProps } from '@/shared/types/tests';
 
-interface PageProps {
+interface PageProps extends TestProps {
     className?: string;
     children: ReactNode;
     onScrollEnd?: VoidFunction;
@@ -56,6 +57,7 @@ export const Page = memo((props: PageProps) => {
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
             id={PAGE_ID}
+            data-testid={props['data-testid'] ?? 'Page'}
         >
             {children}
             {onScrollEnd && <div className={cls.trigger} ref={triggerRef} />}

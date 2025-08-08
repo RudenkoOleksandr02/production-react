@@ -11,12 +11,12 @@ export enum AppRoutes {
     NOT_FOUND = 'not_found',
 }
 
-export const gerRouteMain = () => '/';
-export const gerRouteAbout = () => '/about';
-export const gerRouteProfile = (id: string) => `/profile/${id}`;
-export const gerRouteArticles = () => '/articles';
-export const gerRouteArticleDetails = (id: string) => `/articles/${id}`;
-export const gerRouteArticleCreate = () => '/articles/new';
-export const gerRouteArticleEdit = (id: string) => `/articles/${id}/edit`;
-export const gerRouteAdminPanel = () => '/admin';
-export const gerRouteForbidden = () => '/forbidden';
+export const getRouteMain = () => '/';
+export const getRouteAbout = () => '/about';
+export const getRouteProfile = (id: string) => `/profile/${id}`;
+export const getRouteArticles = () => '/articles';
+export const getRouteArticleDetails = (id: string) => `/articles/${id}`;
+export const getRouteArticleCreate = () => '/articles/new';
+export const getRouteArticleEdit = (id: string) => `/articles/${id}/edit`;
+export const getRouteAdminPanel = () => '/admin';
+export const getRouteForbidden = () => '/forbidden';
