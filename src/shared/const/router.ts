@@ -12,7 +12,7 @@ export enum AppRoutes {
 }
 
 export const gerRouteMain = () => '/';
-export const gerRouteAbout = () => '/';
+export const gerRouteAbout = () => '/about';
 export const gerRouteProfile = (id: string) => `/profile/${id}`;
 export const gerRouteArticles = () => '/articles';
 export const gerRouteArticleDetails = (id: string) => `/articles/${id}`;

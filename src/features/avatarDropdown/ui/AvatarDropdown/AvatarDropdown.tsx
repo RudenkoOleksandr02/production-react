@@ -44,7 +44,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                 { content: t('Profile'), href: gerRouteProfile(authData.id) },
                 { content: t('Logout'), onClick: onLogout },
             ]}
-            trigger={<Avatar src={authData.avatar} size={30} />}
+            trigger={<Avatar fallbackInverted src={authData.avatar} size={30} />}
         />
     );
 });
