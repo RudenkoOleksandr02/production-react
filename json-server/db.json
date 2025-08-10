@@ -621,6 +621,15 @@
         "MANAGER"
       ],
       "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
     }
   ],
   "profile": [
