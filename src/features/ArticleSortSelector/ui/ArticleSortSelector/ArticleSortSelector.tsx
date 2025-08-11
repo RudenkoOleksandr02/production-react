@@ -57,12 +57,14 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
                 options={sortFieldOptions}
                 value={sort}
                 onChange={onChangeSort}
+                data-testid="ArticleSortSelector.SortFieldOptions"
             />
             <Select
                 label={t('By')}
                 options={orderOptions}
                 value={order}
                 onChange={onChangeOrder}
+                data-testid="ArticleSortSelector.OrderOptions"
             />
         </div>
     );

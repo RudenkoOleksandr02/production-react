@@ -654,6 +654,28 @@
       "city": "Обухов",
       "username": "Timur",
       "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
+    },
+    {
+      "id": "3",
+      "first": "Vita",
+      "lastname": "Ermolenko",
+      "age": 23,
+      "currency": "UAH",
+      "country": "Ukraine",
+      "city": "Киев",
+      "username": "Vita",
+      "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
+    },
+    {
+      "id": "4",
+      "first": "test",
+      "lastname": "user",
+      "age": 30,
+      "currency": "UAH",
+      "country": "Ukraine",
+      "city": "Обухов",
+      "username": "testuser",
+      "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
     }
   ],
   "article-ratings": [

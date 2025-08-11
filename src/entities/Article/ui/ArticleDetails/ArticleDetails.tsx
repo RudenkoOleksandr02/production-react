@@ -111,7 +111,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                         src={article?.img}
                     />
                 </HStack>
-                <VStack gap="4">
+                <VStack gap="4" data-testid="ArticleDetails.Info">
                     <Text
                         title={article?.title}
                         text={article?.subtitle}
@@ -133,7 +133,11 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <VStack gap="16" max className={classNames(cls.ArticleDetails, {}, [className])}>
+            <VStack
+                gap="16"
+                max
+                className={classNames(cls.ArticleDetails, {}, [className])}
+            >
                 {content}
             </VStack>
         </DynamicModuleLoader>

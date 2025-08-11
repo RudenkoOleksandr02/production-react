@@ -14,6 +14,7 @@ interface SelectProps<T extends string> {
     value?: T;
     onChange?: (value: T) => void;
     readonly?: boolean;
+    'data-testid'?: string;
 }
 
 export const Select = <T extends string>(props: SelectProps<T>) => {
@@ -24,6 +25,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
         value,
         onChange,
         readonly,
+        'data-testid': dataTestId = 'select',
     } = props;
 
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -52,6 +54,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
                 disabled={readonly}
                 value={value}
                 onChange={onChangeHandler}
+                data-testid={dataTestId}
             >
                 {optionList}
             </select>
