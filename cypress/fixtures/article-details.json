@@ -1,0 +1,31 @@
+{
+  "id": "14",
+  "title": "Rust в Linux: Первый код",
+  "subtitle": "Системное программирование",
+  "img": "https://www.rust-lang.org/static/images/rust-logo-blk.svg",
+  "views": 2760,
+  "createdAt": "02.04.2023",
+  "userId": "1",
+  "type": [
+    "IT"
+  ],
+  "blocks": [
+    {
+      "id": "1",
+      "type": "TEXT",
+      "title": "Безопасность памяти",
+      "paragraphs": [
+        "Linus Torvalds одобрил первые PR на Rust для ядра Linux."
+      ]
+    }
+  ],
+  "user": {
+    "id": "1",
+    "username": "admin",
+    "password": "123",
+    "roles": [
+      "ADMIN"
+    ],
+    "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
+  }
+}
