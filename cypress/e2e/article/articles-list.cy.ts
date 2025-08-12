@@ -27,7 +27,10 @@ describe('The user goes to a page with a list of articles', () => {
         });
         it('and looking for an article', () => {
             cy.searchArticles('TESTING ARTICLE');
-            cy.getByTestId('ArticleListItem.Title').should('have.text', 'TESTING ARTICLE');
+            cy.getByTestId('ArticleListItem.Title').should(
+                'have.text',
+                'TESTING ARTICLE',
+            );
         });
         it('and sorts by views descending', () => {
             cy.sortArticles('views', 'desc');

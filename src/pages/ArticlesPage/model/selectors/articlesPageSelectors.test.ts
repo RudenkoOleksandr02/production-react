@@ -1,9 +1,16 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
 import {
-    getArticlesPageError, getArticlesPageHasMore, getArticlesPageInited,
-    getArticlesPageIsLoading, getArticlesPageLimit,
-    getArticlesPageNum, getArticlesPageOrder, getArticlesPageSearch, getArticlesPageSort, getArticlesPageType,
+    getArticlesPageError,
+    getArticlesPageHasMore,
+    getArticlesPageInited,
+    getArticlesPageIsLoading,
+    getArticlesPageLimit,
+    getArticlesPageNum,
+    getArticlesPageOrder,
+    getArticlesPageSearch,
+    getArticlesPageSort,
+    getArticlesPageType,
     getArticlesPageView,
 } from './articlesPageSelectors';
 
@@ -30,7 +37,9 @@ describe('articlesPageSelectors.test', () => {
                 view: ArticleView.BIG,
             },
         };
-        expect(getArticlesPageView(state as StateSchema)).toEqual(ArticleView.BIG);
+        expect(getArticlesPageView(state as StateSchema)).toEqual(
+            ArticleView.BIG,
+        );
     });
     test('should return page num', () => {
         const state: DeepPartial<StateSchema> = {
@@ -70,7 +79,9 @@ describe('articlesPageSelectors.test', () => {
                 sort: ArticleSortField.CREATED,
             },
         };
-        expect(getArticlesPageSort(state as StateSchema)).toEqual(ArticleSortField.CREATED);
+        expect(getArticlesPageSort(state as StateSchema)).toEqual(
+            ArticleSortField.CREATED,
+        );
     });
     test('should return order asc', () => {
         const state: DeepPartial<StateSchema> = {
@@ -94,21 +105,29 @@ describe('articlesPageSelectors.test', () => {
                 type: ArticleType.IT,
             },
         };
-        expect(getArticlesPageType(state as StateSchema)).toEqual(ArticleType.IT);
+        expect(getArticlesPageType(state as StateSchema)).toEqual(
+            ArticleType.IT,
+        );
     });
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
 
         expect(getArticlesPageIsLoading(state as StateSchema)).toEqual(false);
         expect(getArticlesPageError(state as StateSchema)).toEqual(undefined);
-        expect(getArticlesPageView(state as StateSchema)).toEqual(ArticleView.SMALL);
+        expect(getArticlesPageView(state as StateSchema)).toEqual(
+            ArticleView.SMALL,
+        );
         expect(getArticlesPageNum(state as StateSchema)).toEqual(1);
         expect(getArticlesPageLimit(state as StateSchema)).toEqual(9);
         expect(getArticlesPageHasMore(state as StateSchema)).toEqual(false);
         expect(getArticlesPageInited(state as StateSchema)).toEqual(false);
-        expect(getArticlesPageSort(state as StateSchema)).toEqual(ArticleSortField.CREATED);
+        expect(getArticlesPageSort(state as StateSchema)).toEqual(
+            ArticleSortField.CREATED,
+        );
         expect(getArticlesPageOrder(state as StateSchema)).toEqual('asc');
         expect(getArticlesPageSearch(state as StateSchema)).toEqual('');
-        expect(getArticlesPageType(state as StateSchema)).toEqual(ArticleType.ALL);
+        expect(getArticlesPageType(state as StateSchema)).toEqual(
+            ArticleType.ALL,
+        );
     });
 });

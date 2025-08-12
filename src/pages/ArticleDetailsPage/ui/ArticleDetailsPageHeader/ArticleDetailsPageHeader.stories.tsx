@@ -15,7 +15,9 @@ export default {
     decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ArticleDetailsPageHeader>;
 
-const Template: ComponentStory<typeof ArticleDetailsPageHeader> = (args) => <ArticleDetailsPageHeader {...args} />;
+const Template: ComponentStory<typeof ArticleDetailsPageHeader> = (args) => (
+    <ArticleDetailsPageHeader {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};
@@ -30,7 +32,9 @@ Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
 
 export const CanEdit = Template.bind({});
 CanEdit.args = {};
-CanEdit.decorators = [StoreDecorator({
-    user: { authData: { id: '1', username: 'user' } },
-    articleDetails: { data: { user: { id: '1', username: 'user' } } },
-})];
+CanEdit.decorators = [
+    StoreDecorator({
+        user: { authData: { id: '1', username: 'user' } },
+        articleDetails: { data: { user: { id: '1', username: 'user' } } },
+    }),
+];

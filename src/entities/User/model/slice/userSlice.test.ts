@@ -13,7 +13,9 @@ describe('userSlice.test', () => {
         const state: DeepPartial<UserSchema> = {
             authData: undefined,
         };
-        expect(userReducer(state as UserSchema, userActions.setAuthData(data))).toEqual({
+        expect(
+            userReducer(state as UserSchema, userActions.setAuthData(data)),
+        ).toEqual({
             authData: data,
         });
     });
@@ -25,7 +27,9 @@ describe('userSlice.test', () => {
 
         localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(data));
 
-        expect(userReducer(state as UserSchema, userActions.initAuthData())).toEqual({
+        expect(
+            userReducer(state as UserSchema, userActions.initAuthData()),
+        ).toEqual({
             authData: data,
             _mounted: true,
         });

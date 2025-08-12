@@ -41,21 +41,23 @@ export function ListBox(props: ListBoxProps) {
         <HStack gap="4">
             {label && <span>{`${label}>`}</span>}
             <HListBox
-                className={classNames(popupCls.ListBox, {}, [className, popupCls.popup])}
+                className={classNames(popupCls.ListBox, {}, [
+                    className,
+                    popupCls.popup,
+                ])}
                 as="div"
                 value={value}
                 onChange={onChange}
                 disabled={readonly}
             >
-                <HListBox.Button
-                    className={cls.trigger}
-                    disabled={readonly}
-                >
-                    <Button disabled={readonly}>
-                        {value ?? defaultValue}
-                    </Button>
+                <HListBox.Button className={cls.trigger} disabled={readonly}>
+                    <Button disabled={readonly}>{value ?? defaultValue}</Button>
                 </HListBox.Button>
-                <HListBox.Options className={classNames(cls.options, {}, [mapDirectionClass[direction]])}>
+                <HListBox.Options
+                    className={classNames(cls.options, {}, [
+                        mapDirectionClass[direction],
+                    ])}
+                >
                     {items?.map((item) => (
                         <HListBox.Option
                             key={item.value}
@@ -66,7 +68,8 @@ export function ListBox(props: ListBoxProps) {
                             {({ active, selected }) => (
                                 <li
                                     className={classNames(cls.item, {
-                                        [popupCls.active]: active, [popupCls.disabled]: item.disabled,
+                                        [popupCls.active]: active,
+                                        [popupCls.disabled]: item.disabled,
                                     })}
                                 >
                                     {selected && '✔'}

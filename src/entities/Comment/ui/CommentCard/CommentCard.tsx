@@ -16,18 +16,17 @@ interface CommentCardProps {
 }
 
 export const CommentCard = memo((props: CommentCardProps) => {
-    const {
-        className,
-        comment,
-        isLoading,
-    } = props;
+    const { className, comment, isLoading } = props;
 
     if (isLoading) {
         return (
             <VStack
                 max
                 gap="8"
-                className={classNames(cls.CommentCard, {}, [className, cls.loading])}
+                className={classNames(cls.CommentCard, {}, [
+                    className,
+                    cls.loading,
+                ])}
                 data-testid="CommentCard.Loading"
             >
                 <div className={cls.header}>
@@ -50,9 +49,16 @@ export const CommentCard = memo((props: CommentCardProps) => {
             className={classNames(cls.CommentCard, {}, [className])}
             data-testid="CommentCard.Content"
         >
-            <AppLink to={getRouteProfile(comment.user.id)} className={cls.header}>
+            <AppLink
+                to={getRouteProfile(comment.user.id)}
+                className={cls.header}
+            >
                 {comment.user.avatar && (
-                    <Avatar size={30} src={comment.user.avatar} alt={comment.user.username} />
+                    <Avatar
+                        size={30}
+                        src={comment.user.avatar}
+                        alt={comment.user.username}
+                    />
                 )}
                 <Text title={comment.user.username} />
             </AppLink>

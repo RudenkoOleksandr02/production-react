@@ -13,7 +13,11 @@ export default {
     },
     decorators: [
         StoreDecorator({}),
-        (Store) => <div style={{ display: 'flex', justifyContent: 'flex-end' }}><Store /></div>,
+        (Store) => (
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Store />
+            </div>
+        ),
     ],
 } as ComponentMeta<typeof NotificationButton>;
 
@@ -35,7 +39,9 @@ const list: Notification[] = [
     },
 ];
 
-const Template: ComponentStory<typeof NotificationButton> = (args) => <NotificationButton {...args} />;
+const Template: ComponentStory<typeof NotificationButton> = (args) => (
+    <NotificationButton {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};

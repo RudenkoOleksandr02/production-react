@@ -9,13 +9,14 @@ export const routeScrollSlice = createSlice({
     name: 'routeScroll',
     initialState,
     reducers: {
-        setScrollPosition: (state, { payload }: PayloadAction<{ path: string, position: number }>) => {
+        setScrollPosition: (
+            state,
+            { payload }: PayloadAction<{ path: string; position: number }>,
+        ) => {
             state.scrollMap[payload.path] = payload.position;
         },
     },
 });
 
-export const {
-    actions: routeScrollActions,
-    reducer: routeScrollReducer,
-} = routeScrollSlice;
+export const { actions: routeScrollActions, reducer: routeScrollReducer } =
+    routeScrollSlice;

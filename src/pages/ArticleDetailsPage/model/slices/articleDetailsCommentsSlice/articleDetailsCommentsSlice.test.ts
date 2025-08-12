@@ -1,7 +1,5 @@
 import { Comment } from '@/entities/Comment';
-import {
-    fetchCommentsByArticleId,
-} from '../../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { fetchCommentsByArticleId } from '../../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { ArticleDetailsCommentsSchema } from '../../types/ArticleDetailsCommentsSchema';
 import { articleDetailsCommentsReducer } from './articleDetailsCommentsSlice';
 
@@ -12,8 +10,12 @@ describe('articleDetailsCommentsSlice.test', () => {
             error: 'error',
         };
 
-        expect(articleDetailsCommentsReducer(state as ArticleDetailsCommentsSchema, fetchCommentsByArticleId
-            .pending)).toEqual({ isLoading: true, error: undefined });
+        expect(
+            articleDetailsCommentsReducer(
+                state as ArticleDetailsCommentsSchema,
+                fetchCommentsByArticleId.pending,
+            ),
+        ).toEqual({ isLoading: true, error: undefined });
     });
     test('test fetch comments by article id fulfilled', () => {
         const state: DeepPartial<ArticleDetailsCommentsSchema> = {
@@ -39,8 +41,12 @@ describe('articleDetailsCommentsSlice.test', () => {
             },
         ];
 
-        expect(articleDetailsCommentsReducer(state as ArticleDetailsCommentsSchema, fetchCommentsByArticleId
-            .fulfilled(comments, '1', ''))).toEqual({
+        expect(
+            articleDetailsCommentsReducer(
+                state as ArticleDetailsCommentsSchema,
+                fetchCommentsByArticleId.fulfilled(comments, '1', ''),
+            ),
+        ).toEqual({
             isLoading: false,
             entities: {
                 1: comments[0],

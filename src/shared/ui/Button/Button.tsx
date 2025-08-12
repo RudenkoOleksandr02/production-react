@@ -14,7 +14,7 @@ export enum ButtonTheme {
 export enum ButtonSize {
     M = 'size_m',
     L = 'size_l',
-    XL = 'size_xl'
+    XL = 'size_xl',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -38,10 +38,7 @@ export const Button = memo((props: ButtonProps) => {
         ...otherProps
     } = props;
 
-    const additional: string[] = [
-        cls[theme],
-        cls[size],
-    ];
+    const additional: string[] = [cls[theme], cls[size]];
 
     const mods: Mods = {
         [cls.square]: square,

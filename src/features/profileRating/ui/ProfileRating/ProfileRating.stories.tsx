@@ -10,14 +10,18 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [StoreDecorator({
-        user: {
-            authData: { id: '2' },
-        },
-    })],
+    decorators: [
+        StoreDecorator({
+            user: {
+                authData: { id: '2' },
+            },
+        }),
+    ],
 } as ComponentMeta<typeof ProfileRating>;
 
-const Template: ComponentStory<typeof ProfileRating> = (args) => <ProfileRating {...args} />;
+const Template: ComponentStory<typeof ProfileRating> = (args) => (
+    <ProfileRating {...args} />
+);
 
 export const WithRate = Template.bind({});
 WithRate.args = {

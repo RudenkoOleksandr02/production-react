@@ -52,7 +52,10 @@ describe('articleDetailsSlice.test', () => {
         };
 
         expect(
-            articleDetailsReducer(state as ArticleDetailsSchema, fetchArticleById.pending),
+            articleDetailsReducer(
+                state as ArticleDetailsSchema,
+                fetchArticleById.pending,
+            ),
         ).toEqual({ isLoading: true, error: undefined });
     });
 

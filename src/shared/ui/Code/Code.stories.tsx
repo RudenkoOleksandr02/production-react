@@ -13,20 +13,21 @@ export default {
     },
 } as ComponentMeta<typeof Code>;
 
-const text = 'import React from \'react\';\n'
-    + 'import { ComponentStory, ComponentMeta } from \'@storybook/react\';\n'
-    + '\n'
-    + 'import { Code } from \'./Code\';\n'
-    + '\n'
-    + 'export default {\n'
-    + '    title: \'shared/Code\',\n'
-    + '    component: Code,\n'
-    + '    argTypes: {\n'
-    + '        backgroundColor: { control: \'color\' },\n'
-    + '    },\n'
-    + '} as ComponentMeta<typeof Code>;\n'
-    + '\n'
-    + 'consts Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;';
+const text =
+    "import React from 'react';\n" +
+    "import { ComponentStory, ComponentMeta } from '@storybook/react';\n" +
+    '\n' +
+    "import { Code } from './Code';\n" +
+    '\n' +
+    'export default {\n' +
+    "    title: 'shared/Code',\n" +
+    '    component: Code,\n' +
+    '    argTypes: {\n' +
+    "        backgroundColor: { control: 'color' },\n" +
+    '    },\n' +
+    '} as ComponentMeta<typeof Code>;\n' +
+    '\n' +
+    'consts Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;';
 
 const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;
 

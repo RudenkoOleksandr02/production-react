@@ -1,11 +1,11 @@
 {
-  "id": "4",
-  "first": "test",
-  "lastname": "user",
-  "age": 30,
-  "currency": "UAH",
-  "country": "Ukraine",
-  "city": "Обухов",
-  "username": "testuser",
-  "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
+    "id": "4",
+    "first": "test",
+    "lastname": "user",
+    "age": 30,
+    "currency": "UAH",
+    "country": "Ukraine",
+    "city": "Обухов",
+    "username": "testuser",
+    "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
 }

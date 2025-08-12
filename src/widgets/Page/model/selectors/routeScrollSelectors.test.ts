@@ -25,7 +25,9 @@ describe('routeScrollSelectors.test', () => {
                 },
             },
         };
-        expect(getRouteScrollByPath(state as StateSchema, 'article/')).toEqual(300);
+        expect(getRouteScrollByPath(state as StateSchema, 'article/')).toEqual(
+            300,
+        );
     });
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {
@@ -34,6 +36,8 @@ describe('routeScrollSelectors.test', () => {
             },
         };
         expect(getRouteScroll(state as StateSchema)).toEqual({});
-        expect(getRouteScrollByPath(state as StateSchema, 'article/')).toEqual(0);
+        expect(getRouteScrollByPath(state as StateSchema, 'article/')).toEqual(
+            0,
+        );
     });
 });

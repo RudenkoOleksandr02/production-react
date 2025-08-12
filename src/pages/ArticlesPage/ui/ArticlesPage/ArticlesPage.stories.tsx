@@ -3,7 +3,11 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import {
-    Article, ArticleBlockType, ArticleSortField, ArticleType, ArticleView,
+    Article,
+    ArticleBlockType,
+    ArticleSortField,
+    ArticleType,
+    ArticleView,
 } from '@/entities/Article';
 import ArticlesPage from './ArticlesPage';
 
@@ -15,7 +19,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticlesPage>;
 
-const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {...args} />;
+const Template: ComponentStory<typeof ArticlesPage> = (args) => (
+    <ArticlesPage {...args} />
+);
 
 const articles: Article[] = [
     {
@@ -102,34 +108,38 @@ const articles: Article[] = [
 
 export const Small = Template.bind({});
 Small.args = {};
-Small.decorators = [StoreDecorator({
-    articlesPage: {
-        view: ArticleView.SMALL,
-        entities: {
-            1: articles[0],
-            2: articles[1],
+Small.decorators = [
+    StoreDecorator({
+        articlesPage: {
+            view: ArticleView.SMALL,
+            entities: {
+                1: articles[0],
+                2: articles[1],
+            },
+            ids: ['1', '2'],
+            page: 1,
+            hasMore: false,
+            _inited: true,
+            limit: 9,
+            sort: ArticleSortField.CREATED,
+            search: '',
+            order: 'asc',
+            type: ArticleType.ALL,
         },
-        ids: ['1', '2'],
-        page: 1,
-        hasMore: false,
-        _inited: true,
-        limit: 9,
-        sort: ArticleSortField.CREATED,
-        search: '',
-        order: 'asc',
-        type: ArticleType.ALL,
-    },
-})];
+    }),
+];
 
 export const Big = Template.bind({});
 Big.args = {};
-Big.decorators = [StoreDecorator({
-    articlesPage: {
-        view: ArticleView.BIG,
-        entities: {
-            1: articles[0],
-            2: articles[1],
+Big.decorators = [
+    StoreDecorator({
+        articlesPage: {
+            view: ArticleView.BIG,
+            entities: {
+                1: articles[0],
+                2: articles[1],
+            },
+            ids: ['1', '2'],
         },
-        ids: ['1', '2'],
-    },
-})];
+    }),
+];

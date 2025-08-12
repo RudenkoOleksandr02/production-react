@@ -13,7 +13,9 @@ export default {
     decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof EditableProfileCard>;
 
-const Template: ComponentStory<typeof EditableProfileCard> = (args) => <EditableProfileCard {...args} />;
+const Template: ComponentStory<typeof EditableProfileCard> = (args) => (
+    <EditableProfileCard {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};

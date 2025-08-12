@@ -14,7 +14,9 @@ describe('recommendations.test', () => {
             },
         };
 
-        expect(getArticleRecommendationsIsLoading(state as StateSchema)).toEqual(true);
+        expect(
+            getArticleRecommendationsIsLoading(state as StateSchema),
+        ).toEqual(true);
     });
     test('should return error', () => {
         const state: DeepPartial<StateSchema> = {
@@ -25,12 +27,18 @@ describe('recommendations.test', () => {
             },
         };
 
-        expect(getArticleRecommendationsError(state as StateSchema)).toEqual('error');
+        expect(getArticleRecommendationsError(state as StateSchema)).toEqual(
+            'error',
+        );
     });
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
 
-        expect(getArticleRecommendationsIsLoading(state as StateSchema)).toEqual(false);
-        expect(getArticleRecommendationsError(state as StateSchema)).toEqual(undefined);
+        expect(
+            getArticleRecommendationsIsLoading(state as StateSchema),
+        ).toEqual(false);
+        expect(getArticleRecommendationsError(state as StateSchema)).toEqual(
+            undefined,
+        );
     });
 });

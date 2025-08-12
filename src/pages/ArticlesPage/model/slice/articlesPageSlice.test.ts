@@ -1,5 +1,8 @@
 import {
-    Article, ArticleSortField, ArticleType, ArticleView,
+    Article,
+    ArticleSortField,
+    ArticleType,
+    ArticleView,
     ArticleBlockType,
 } from '@/entities/Article';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
@@ -94,43 +97,67 @@ describe('articlesPageSlice.test', () => {
             view: ArticleView.SMALL,
         };
 
-        expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
-            .setView(ArticleView.BIG))).toEqual({ view: ArticleView.BIG });
+        expect(
+            articlesPageReducer(
+                state as ArticlesPageSchema,
+                articlesPageActions.setView(ArticleView.BIG),
+            ),
+        ).toEqual({ view: ArticleView.BIG });
     });
     test('test set page', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
             page: 2,
         };
-        expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
-            .setPage(3))).toEqual({ page: 3 });
+        expect(
+            articlesPageReducer(
+                state as ArticlesPageSchema,
+                articlesPageActions.setPage(3),
+            ),
+        ).toEqual({ page: 3 });
     });
     test('test set order', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
             order: 'desc',
         };
-        expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
-            .setOrder('asc'))).toEqual({ order: 'asc' });
+        expect(
+            articlesPageReducer(
+                state as ArticlesPageSchema,
+                articlesPageActions.setOrder('asc'),
+            ),
+        ).toEqual({ order: 'asc' });
     });
     test('test set search', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
             search: '',
         };
-        expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
-            .setSearch('text'))).toEqual({ search: 'text' });
+        expect(
+            articlesPageReducer(
+                state as ArticlesPageSchema,
+                articlesPageActions.setSearch('text'),
+            ),
+        ).toEqual({ search: 'text' });
     });
     test('test set sort', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
             sort: ArticleSortField.CREATED,
         };
-        expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
-            .setSort(ArticleSortField.TITLE))).toEqual({ sort: ArticleSortField.TITLE });
+        expect(
+            articlesPageReducer(
+                state as ArticlesPageSchema,
+                articlesPageActions.setSort(ArticleSortField.TITLE),
+            ),
+        ).toEqual({ sort: ArticleSortField.TITLE });
     });
     test('test set type', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
             type: ArticleType.ALL,
         };
-        expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
-            .setType(ArticleType.IT))).toEqual({ type: ArticleType.IT });
+        expect(
+            articlesPageReducer(
+                state as ArticlesPageSchema,
+                articlesPageActions.setType(ArticleType.IT),
+            ),
+        ).toEqual({ type: ArticleType.IT });
     });
     test('test init state', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
@@ -140,8 +167,12 @@ describe('articlesPageSlice.test', () => {
         };
         localStorage.setItem(ARTICLES_VIEW_LOCALSTORAGE_KEY, ArticleView.SMALL);
 
-        expect(articlesPageReducer(state as ArticlesPageSchema, articlesPageActions
-            .initState())).toEqual({ view: ArticleView.SMALL, limit: 9, _inited: true });
+        expect(
+            articlesPageReducer(
+                state as ArticlesPageSchema,
+                articlesPageActions.initState(),
+            ),
+        ).toEqual({ view: ArticleView.SMALL, limit: 9, _inited: true });
     });
     test('test fetch articles list pending', () => {
         const state: DeepPartial<ArticlesPageSchema> = {
@@ -154,8 +185,12 @@ describe('articlesPageSlice.test', () => {
             ids: ['1', '2'],
         };
 
-        expect(articlesPageReducer(state as ArticlesPageSchema, fetchArticlesList
-            .pending('', { replace: true }))).toEqual({
+        expect(
+            articlesPageReducer(
+                state as ArticlesPageSchema,
+                fetchArticlesList.pending('', { replace: true }),
+            ),
+        ).toEqual({
             isLoading: true,
             error: undefined,
             entities: {},
@@ -170,8 +205,12 @@ describe('articlesPageSlice.test', () => {
             hasMore: true,
         };
 
-        expect(articlesPageReducer(state as ArticlesPageSchema, fetchArticlesList
-            .fulfilled(articles, '', { replace: true }))).toEqual({
+        expect(
+            articlesPageReducer(
+                state as ArticlesPageSchema,
+                fetchArticlesList.fulfilled(articles, '', { replace: true }),
+            ),
+        ).toEqual({
             entities: {
                 1: articles[0],
                 2: articles[1],

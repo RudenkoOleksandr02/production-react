@@ -1,5 +1,8 @@
 import {
-    Article, ArticleType, ArticleBlockType, ArticleSortField,
+    Article,
+    ArticleType,
+    ArticleBlockType,
+    ArticleSortField,
 } from '@/entities/Article';
 import { TestAsyncThunk } from '@/shared/config/tests/TestAsyncThunk';
 import { fetchArticlesList } from './fetchArticlesList';

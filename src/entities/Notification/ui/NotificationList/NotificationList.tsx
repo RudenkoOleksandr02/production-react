@@ -11,16 +11,18 @@ interface NotificationListProps {
 }
 
 export const NotificationList = memo((props: NotificationListProps) => {
-    const {
-        className,
-    } = props;
+    const { className } = props;
     const { data, isLoading } = useNotifications(null, {
         pollingInterval: 5000,
     });
 
     if (isLoading) {
         return (
-            <VStack gap="16" max className={classNames(cls.NotificationList, {}, [className])}>
+            <VStack
+                gap="16"
+                max
+                className={classNames(cls.NotificationList, {}, [className])}
+            >
                 <Skeleton width="100%" borderRadius="8px" height="80px" />
                 <Skeleton width="100%" borderRadius="8px" height="80px" />
                 <Skeleton width="100%" borderRadius="8px" height="80px" />
@@ -29,7 +31,11 @@ export const NotificationList = memo((props: NotificationListProps) => {
     }
 
     return (
-        <VStack gap="16" max className={classNames(cls.NotificationList, {}, [className])}>
+        <VStack
+            gap="16"
+            max
+            className={classNames(cls.NotificationList, {}, [className])}
+        >
             {data?.map((item) => (
                 <NotificationItem key={item.id} item={item} />
             ))}

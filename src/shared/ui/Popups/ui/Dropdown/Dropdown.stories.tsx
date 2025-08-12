@@ -11,11 +11,17 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        (Story) => <div style={{ padding: '200px' }}><Story /></div>,
+        (Story) => (
+            <div style={{ padding: '200px' }}>
+                <Story />
+            </div>
+        ),
     ],
 } as ComponentMeta<typeof Dropdown>;
 
-const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />;
+const Template: ComponentStory<typeof Dropdown> = (args) => (
+    <Dropdown {...args} />
+);
 
 export const TopLeft = Template.bind({});
 TopLeft.args = {

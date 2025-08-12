@@ -13,7 +13,9 @@ export default {
     decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ForbiddenPage>;
 
-const Template: ComponentStory<typeof ForbiddenPage> = (args) => <ForbiddenPage />;
+const Template: ComponentStory<typeof ForbiddenPage> = (args) => (
+    <ForbiddenPage />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};

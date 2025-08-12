@@ -3,7 +3,10 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { RatingCard } from '@/entities/Rating';
 import { getUserAuthData } from '@/entities/User';
-import { useGetProfileRating, useRateProfile } from '../../api/profileRaitingApi';
+import {
+    useGetProfileRating,
+    useRateProfile,
+} from '../../api/profileRaitingApi';
 import { Skeleton } from '@/shared/ui/Skeleton';
 
 export interface ProfileRatingProps {
@@ -12,35 +15,44 @@ export interface ProfileRatingProps {
 }
 
 const ProfileRating = memo((props: ProfileRatingProps) => {
-    const {
-        className,
-        profileId,
-    } = props;
+    const { className, profileId } = props;
     const { t } = useTranslation();
     const authData = useSelector(getUserAuthData);
-    const { data, isLoading } = useGetProfileRating({ userId: authData?.id ?? '', profileId: profileId ?? '' });
+    const { data, isLoading } = useGetProfileRating({
+        userId: authData?.id ?? '',
+        profileId: profileId ?? '',
+    });
     const [rateProfileMutation] = useRateProfile();
 
-    const handleRateProfile = useCallback((rate: number, feedback?: string) => {
-        try {
-            rateProfileMutation({
-                userId: authData?.id ?? '',
-                profileId: profileId ?? '',
-                rate,
-                feedback,
-            });
-        } catch (e) {
-            console.error(e);
-        }
-    }, [authData?.id, profileId, rateProfileMutation]);
+    const handleRateProfile = useCallback(
+        (rate: number, feedback?: string) => {
+            try {
+                rateProfileMutation({
+                    userId: authData?.id ?? '',
+                    profileId: profileId ?? '',
+                    rate,
+                    feedback,
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        },
+        [authData?.id, profileId, rateProfileMutation],
+    );
 
-    const onAccept = useCallback((starsCount: number, feedback?: string) => {
-        handleRateProfile(starsCount, feedback);
-    }, [handleRateProfile]);
+    const onAccept = useCallback(
+        (starsCount: number, feedback?: string) => {
+            handleRateProfile(starsCount, feedback);
+        },
+        [handleRateProfile],
+    );
 
-    const onCancel = useCallback((starsCount: number) => {
-        handleRateProfile(starsCount);
-    }, [handleRateProfile]);
+    const onCancel = useCallback(
+        (starsCount: number) => {
+            handleRateProfile(starsCount);
+        },
+        [handleRateProfile],
+    );
 
     if (profileId === authData?.id) {
         return null;

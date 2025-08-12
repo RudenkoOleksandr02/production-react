@@ -13,16 +13,30 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        (Story) => <div style={{ display: 'flex', justifyContent: 'flex-end' }}><Story /></div>,
+        (Story) => (
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Story />
+            </div>
+        ),
     ],
 } as ComponentMeta<typeof AvatarDropdown>;
 
-const Template: ComponentStory<typeof AvatarDropdown> = (args) => <AvatarDropdown {...args} />;
+const Template: ComponentStory<typeof AvatarDropdown> = (args) => (
+    <AvatarDropdown {...args} />
+);
 
 export const User = Template.bind({});
 User.args = {};
-User.decorators = [StoreDecorator({ user: { authData: { roles: [UserRole.USER], avatar: img } } })];
+User.decorators = [
+    StoreDecorator({
+        user: { authData: { roles: [UserRole.USER], avatar: img } },
+    }),
+];
 
 export const Admin = Template.bind({});
 Admin.args = {};
-Admin.decorators = [StoreDecorator({ user: { authData: { roles: [UserRole.ADMIN], avatar: img } } })];
+Admin.decorators = [
+    StoreDecorator({
+        user: { authData: { roles: [UserRole.ADMIN], avatar: img } },
+    }),
+];

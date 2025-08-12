@@ -1,8 +1,6 @@
 import { TestAsyncThunk } from '@/shared/config/tests/TestAsyncThunk';
 import { Article, ArticleBlockType, ArticleType } from '@/entities/Article';
-import {
-    fetchArticleRecommendations,
-} from './fetchArticleRecommendations';
+import { fetchArticleRecommendations } from './fetchArticleRecommendations';
 
 const articles: Article[] = [
     {

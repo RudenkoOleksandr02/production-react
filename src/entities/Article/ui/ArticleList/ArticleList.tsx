@@ -16,11 +16,10 @@ interface ArticleListProps {
     target?: HTMLAttributeAnchorTarget;
 }
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
-    .fill(0)
-    .map((item, index) => (
+const getSkeletons = (view: ArticleView) =>
+    new Array(view === ArticleView.SMALL ? 9 : 3).fill(0).map((item, index) => (
         // eslint-disable-next-line
-        <ArticleListItemSkeleton className={cls.card} view={view} key={index}/>
+        <ArticleListItemSkeleton className={cls.card} view={view} key={index} />
     ));
 
 export const ArticleList = memo((props: ArticleListProps) => {
@@ -35,7 +34,12 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     if (!isLoading && !articles.length) {
         return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+            <div
+                className={classNames(cls.ArticleList, {}, [
+                    className,
+                    cls[view],
+                ])}
+            >
                 <Text size={TextSize.L} title={t('Articles not found')} />
             </div>
         );

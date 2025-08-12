@@ -14,11 +14,13 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [(Story) => (
-        <AnimationProvider>
-            <Story />
-        </AnimationProvider>
-    )],
+    decorators: [
+        (Story) => (
+            <AnimationProvider>
+                <Story />
+            </AnimationProvider>
+        ),
+    ],
 } as ComponentMeta<typeof Drawer>;
 
 const children = (

@@ -8,8 +8,15 @@ describe('routeScrollSlice.test', () => {
                 'article/': 100,
             },
         };
-        expect(routeScrollReducer(state as RouteScrollSchema, routeScrollActions
-            .setScrollPosition({ path: 'article/1', position: 300 }))).toEqual({
+        expect(
+            routeScrollReducer(
+                state as RouteScrollSchema,
+                routeScrollActions.setScrollPosition({
+                    path: 'article/1',
+                    position: 300,
+                }),
+            ),
+        ).toEqual({
             scrollMap: {
                 'article/': 100,
                 'article/1': 300,

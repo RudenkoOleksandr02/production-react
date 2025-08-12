@@ -1,745 +1,697 @@
 {
-  "notifications": [
-    {
-      "id": "1",
-      "title": "Уведомление 1",
-      "description": "Произошло какое-то событие",
-      "userId": "1"
-    },
-    {
-      "id": "2",
-      "title": "Уведомление 2",
-      "description": "Произошло какое-то событие",
-      "userId": "1",
-      "href": "http://localhost:3000/admin"
-    },
-    {
-      "id": "3",
-      "title": "Уведомление 3",
-      "description": "Произошло какое-то событие",
-      "userId": "1",
-      "href": "http://localhost:3000/admin"
-    },
-    {
-      "id": "4",
-      "title": "Уведомление 4",
-      "description": "Произошло какое-то событие",
-      "userId": "1"
-    },
-    {
-      "id": "5",
-      "title": "Уведомление 1",
-      "description": "Произошло какое-то событие",
-      "userId": "2"
-    }
-  ],
-  "posts": [
-    {
-      "id": "1",
-      "title": "json-server",
-      "userId": 1
-    },
-    {
-      "id": "2",
-      "title": "json-server",
-      "userId": "2"
-    }
-  ],
-  "articles": [
-    {
-      "id": "1",
-      "title": "JavaScript: Новые возможности ES2022",
-      "subtitle": "Топ-10 фич JavaScript за 2022 год",
-      "img": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
-      "views": 2540,
-      "createdAt": "15.03.2022",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
+    "notifications": [
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Динамический импорт",
-          "paragraphs": [
-            "ES2022 представил улучшенный синтаксис для динамического импорта модулей.",
-            "Теперь можно загружать модули по условию: if (featureFlag) { import('/module.js') }"
-          ]
+            "id": "1",
+            "title": "Уведомление 1",
+            "description": "Произошло какое-то событие",
+            "userId": "1"
         },
         {
-          "id": "2",
-          "type": "CODE",
-          "code": "class MyClass {\n  #privateField = 42;\n\n  getPrivate() {\n    return this.#privateField;\n  }\n}"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Python 3.11: Ускорение программ",
-      "subtitle": "На сколько быстрее работает новый Python?",
-      "img": "https://miro.medium.com/v2/resize:fit:1400/0*zz1xUVRvrsItOFos",
-      "views": 1870,
-      "createdAt": "22.04.2022",
-      "userId": "2",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
+            "id": "2",
+            "title": "Уведомление 2",
+            "description": "Произошло какое-то событие",
+            "userId": "1",
+            "href": "http://localhost:3000/admin"
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Оптимизации интерпретатора",
-          "paragraphs": [
-            "Python 3.11 демонстрирует прирост производительности на 15-60% благодаря специализированным байткодам."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Квантовые компьютеры: Прорыв года",
-      "subtitle": "Как квантовые вычисления изменят мир",
-      "img": "https://cff2.earth.com/uploads/2024/05/12151011/quantum-computing-breakthrough_pure-silicon_1m.jpg",
-      "views": 3200,
-      "createdAt": "10.05.2022",
-      "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [
+            "id": "3",
+            "title": "Уведомление 3",
+            "description": "Произошло какое-то событие",
+            "userId": "1",
+            "href": "http://localhost:3000/admin"
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Квантовое превосходство",
-          "paragraphs": [
-            "IBM объявила о создании 433-кубитного процессора Osprey - рекордной мощности на сегодня."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Криптовалюты: Анализ рынка",
-      "subtitle": "Перспективы Bitcoin после падения",
-      "img": "https://img.freepik.com/free-vector/cryptocurrency-bitcoin-golden-coin_107791-7769.jpg",
-      "views": 4210,
-      "createdAt": "18.06.2022",
-      "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
-      "blocks": [
+            "id": "4",
+            "title": "Уведомление 4",
+            "description": "Произошло какое-то событие",
+            "userId": "1"
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Регуляторные изменения",
-          "paragraphs": [
-            "ЕЦБ представил новые правила регулирования стейблкоинов и DeFi-платформ."
-          ]
+            "id": "5",
+            "title": "Уведомление 1",
+            "description": "Произошло какое-то событие",
+            "userId": "2"
         }
-      ]
-    },
-    {
-      "id": "5",
-      "title": "React 18: Новые хуки",
-      "subtitle": "Что изменилось для фронтенд-разработчиков",
-      "img": "https://repository-images.githubusercontent.com/347723622/92065800-865a-11eb-9626-dff3cb7fef55",
-      "views": 3100,
-      "createdAt": "05.07.2022",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
+    ],
+    "posts": [
         {
-          "id": "1",
-          "type": "CODE",
-          "code": "import { useId } from 'react';\n\nfunction PasswordField() {\n  const id = useId();\n  return (\n    <>\n      <label htmlFor={id}>Password</label>\n      <input id={id} type=\"password\" />\n    </>\n  );\n}"
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "title": "Глобальное потепление: Новые данные",
-      "subtitle": "Отчет IPCC о климатических изменениях",
-      "img": "https://climate.copernicus.eu/sites/default/files/custom-uploads/Global%20Climate%20Highlights%202023/Final%20Report/fig5_GCH2023_surface_temperature_anomaly_regional_contributions.png",
-      "views": 5380,
-      "createdAt": "12.08.2022",
-      "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [
+            "id": "1",
+            "title": "json-server",
+            "userId": 1
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Температурные рекорды",
-          "paragraphs": [
-            "2022 год стал одним из самых жарких за всю историю наблюдений с отклонением +1.15°C."
-          ]
+            "id": "2",
+            "title": "json-server",
+            "userId": "2"
         }
-      ]
-    },
-    {
-      "id": "7",
-      "title": "Инфляция в ЕС: Прогнозы",
-      "subtitle": "Как ЦБ борются с ростом цен",
-      "img": "https://www.ecb.europa.eu/press/economic-bulletin/focus/2023/html/ebbox202208_01/ecb.ebbox202208_01.en_img0.png?ac99701c8e9cc6bffae04a3dfa9b1ab2",
-      "views": 2900,
-      "createdAt": "21.09.2022",
-      "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
-      "blocks": [
+    ],
+    "articles": [
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Монетарная политика",
-          "paragraphs": [
-            "ЕЦБ повысил ключевую ставку до 1.25% - максимального уровня за 10 лет."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "title": "Kotlin Multiplatform",
-      "subtitle": "Кроссплатформенная разработка",
-      "img": "https://miro.medium.com/v2/resize:fit:1200/1*BOu-NHLmhDQH7MKlymYQOA.png",
-      "views": 1780,
-      "createdAt": "30.10.2022",
-      "userId": "2",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
+            "id": "1",
+            "title": "JavaScript: Новые возможности ES2022",
+            "subtitle": "Топ-10 фич JavaScript за 2022 год",
+            "img": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+            "views": 2540,
+            "createdAt": "15.03.2022",
+            "userId": "1",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Динамический импорт",
+                    "paragraphs": [
+                        "ES2022 представил улучшенный синтаксис для динамического импорта модулей.",
+                        "Теперь можно загружать модули по условию: if (featureFlag) { import('/module.js') }"
+                    ]
+                },
+                {
+                    "id": "2",
+                    "type": "CODE",
+                    "code": "class MyClass {\n  #privateField = 42;\n\n  getPrivate() {\n    return this.#privateField;\n  }\n}"
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "CODE",
-          "code": "// Общий код для iOS/Android\nclass Greeting {\n    fun greeting(): String {\n        return \"Hello, ${Platform().platform}!\"\n    }\n}"
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "title": "Марсоход Perseverance: Открытия",
-      "subtitle": "Органические молекулы на Марсе",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGrhOqZDD8tncc-JYYDjzT84RiFFcdnAwihg&s",
-      "views": 4120,
-      "createdAt": "08.11.2022",
-      "userId": "1",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [
+            "id": "2",
+            "title": "Python 3.11: Ускорение программ",
+            "subtitle": "На сколько быстрее работает новый Python?",
+            "img": "https://miro.medium.com/v2/resize:fit:1400/0*zz1xUVRvrsItOFos",
+            "views": 1870,
+            "createdAt": "22.04.2022",
+            "userId": "2",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Оптимизации интерпретатора",
+                    "paragraphs": [
+                        "Python 3.11 демонстрирует прирост производительности на 15-60% благодаря специализированным байткодам."
+                    ]
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Астробиологические исследования",
-          "paragraphs": [
-            "Обнаружены сложные органические соединения в кратере Езеро - возможные следы древней жизни."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "title": "Зеленые облигации: Рынок ESG",
-      "subtitle": "Инвестиции в устойчивое развитие",
-      "img": "https://www.thebusinessresearchcompany.com/graphimages/Green_Bonds_Market_2025_Graph.webp",
-      "views": 2250,
-      "createdAt": "17.12.2022",
-      "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
-      "blocks": [
+            "id": "3",
+            "title": "Квантовые компьютеры: Прорыв года",
+            "subtitle": "Как квантовые вычисления изменят мир",
+            "img": "https://cff2.earth.com/uploads/2024/05/12151011/quantum-computing-breakthrough_pure-silicon_1m.jpg",
+            "views": 3200,
+            "createdAt": "10.05.2022",
+            "userId": "2",
+            "type": ["SCIENCE"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Квантовое превосходство",
+                    "paragraphs": [
+                        "IBM объявила о создании 433-кубитного процессора Osprey - рекордной мощности на сегодня."
+                    ]
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Финансирование экопроектов",
-          "paragraphs": [
-            "Объем рынка зеленых облигаций превысил $2 трлн благодаря новым регуляторным стандартам."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "title": "WebAssembly: Будущее веба",
-      "subtitle": "Запуск С++ приложений в браузере",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/1/1f/WebAssembly_Logo.svg",
-      "views": 1980,
-      "createdAt": "05.01.2023",
-      "userId": "2",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
+            "id": "4",
+            "title": "Криптовалюты: Анализ рынка",
+            "subtitle": "Перспективы Bitcoin после падения",
+            "img": "https://img.freepik.com/free-vector/cryptocurrency-bitcoin-golden-coin_107791-7769.jpg",
+            "views": 4210,
+            "createdAt": "18.06.2022",
+            "userId": "1",
+            "type": ["ECONOMICS"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Регуляторные изменения",
+                    "paragraphs": [
+                        "ЕЦБ представил новые правила регулирования стейблкоинов и DeFi-платформ."
+                    ]
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Производительность",
-          "paragraphs": [
-            "WASM позволяет достичь 85% производительности нативных приложений."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "title": "ИИ в медицине: Диагностика рака",
-      "subtitle": "Нейросети против онкологии",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIDYhcbPqtMTrEEx2HSr8h5GNyEVODTITjKA&s",
-      "views": 5670,
-      "createdAt": "14.02.2023",
-      "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [
+            "id": "5",
+            "title": "React 18: Новые хуки",
+            "subtitle": "Что изменилось для фронтенд-разработчиков",
+            "img": "https://repository-images.githubusercontent.com/347723622/92065800-865a-11eb-9626-dff3cb7fef55",
+            "views": 3100,
+            "createdAt": "05.07.2022",
+            "userId": "1",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "CODE",
+                    "code": "import { useId } from 'react';\n\nfunction PasswordField() {\n  const id = useId();\n  return (\n    <>\n      <label htmlFor={id}>Password</label>\n      <input id={id} type=\"password\" />\n    </>\n  );\n}"
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Ранняя диагностика",
-          "paragraphs": [
-            "Алгоритмы DeepMind обнаруживают рак легких на 5 лет раньше стандартных методов."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "13",
-      "title": "Цифровой доллар: Пилотный проект",
-      "subtitle": "Будущее финансовой системы",
-      "img": "https://cdn.wccftech.com/wp-content/uploads/2022/11/image_2022-11-16_020947615.png",
-      "views": 3890,
-      "createdAt": "25.03.2023",
-      "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
-      "blocks": [
+            "id": "6",
+            "title": "Глобальное потепление: Новые данные",
+            "subtitle": "Отчет IPCC о климатических изменениях",
+            "img": "https://climate.copernicus.eu/sites/default/files/custom-uploads/Global%20Climate%20Highlights%202023/Final%20Report/fig5_GCH2023_surface_temperature_anomaly_regional_contributions.png",
+            "views": 5380,
+            "createdAt": "12.08.2022",
+            "userId": "2",
+            "type": ["SCIENCE"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Температурные рекорды",
+                    "paragraphs": [
+                        "2022 год стал одним из самых жарких за всю историю наблюдений с отклонением +1.15°C."
+                    ]
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Пилотный запуск",
-          "paragraphs": [
-            "Тестирование цифрового доллара в 15 банках с 2023 года."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "title": "Rust в Linux: Первый код",
-      "subtitle": "Системное программирование",
-      "img": "https://www.rust-lang.org/static/images/rust-logo-blk.svg",
-      "views": 2760,
-      "createdAt": "02.04.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
+            "id": "7",
+            "title": "Инфляция в ЕС: Прогнозы",
+            "subtitle": "Как ЦБ борются с ростом цен",
+            "img": "https://www.ecb.europa.eu/press/economic-bulletin/focus/2023/html/ebbox202208_01/ecb.ebbox202208_01.en_img0.png?ac99701c8e9cc6bffae04a3dfa9b1ab2",
+            "views": 2900,
+            "createdAt": "21.09.2022",
+            "userId": "1",
+            "type": ["ECONOMICS"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Монетарная политика",
+                    "paragraphs": [
+                        "ЕЦБ повысил ключевую ставку до 1.25% - максимального уровня за 10 лет."
+                    ]
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Безопасность памяти",
-          "paragraphs": [
-            "Linus Torvalds одобрил первые PR на Rust для ядра Linux."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "title": "CRISPR: Генная терапия",
-      "subtitle": "Лечение наследственных заболеваний",
-      "img": "https://images.squarespace-cdn.com/content/v1/5efc3845201cfd62a7cad809/1604433314478-I8E0KAY56CPXGNQALS2D/maxresdefault.jpg",
-      "views": 4320,
-      "createdAt": "11.05.2023",
-      "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [
+            "id": "8",
+            "title": "Kotlin Multiplatform",
+            "subtitle": "Кроссплатформенная разработка",
+            "img": "https://miro.medium.com/v2/resize:fit:1200/1*BOu-NHLmhDQH7MKlymYQOA.png",
+            "views": 1780,
+            "createdAt": "30.10.2022",
+            "userId": "2",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "CODE",
+                    "code": "// Общий код для iOS/Android\nclass Greeting {\n    fun greeting(): String {\n        return \"Hello, ${Platform().platform}!\"\n    }\n}"
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Клинические испытания",
-          "paragraphs": [
-            "Успешное применение CRISPR для лечения серповидноклеточной анемии в 45 случаях."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "16",
-      "title": "Мировой кризис цепочек поставок",
-      "subtitle": "Как пандемия изменила логистику",
-      "img": "https://blog.manningtoncommercial.com/hubfs/TheGlobalSupplyChain_Main.png",
-      "views": 3150,
-      "createdAt": "19.06.2023",
-      "userId": "1",
-      "type": [
-        "ECONOMICS"
-      ],
-      "blocks": [
+            "id": "9",
+            "title": "Марсоход Perseverance: Открытия",
+            "subtitle": "Органические молекулы на Марсе",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGrhOqZDD8tncc-JYYDjzT84RiFFcdnAwihg&s",
+            "views": 4120,
+            "createdAt": "08.11.2022",
+            "userId": "1",
+            "type": ["SCIENCE"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Астробиологические исследования",
+                    "paragraphs": [
+                        "Обнаружены сложные органические соединения в кратере Езеро - возможные следы древней жизни."
+                    ]
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Решоринг производств",
-          "paragraphs": [
-            "Компании инвестируют $240 млрд в возврат производств из Азии."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "17",
-      "title": "TypeScript 5.0: Новинки",
-      "subtitle": "Улучшения системы типов",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-      "views": 2870,
-      "createdAt": "28.07.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
+            "id": "10",
+            "title": "Зеленые облигации: Рынок ESG",
+            "subtitle": "Инвестиции в устойчивое развитие",
+            "img": "https://www.thebusinessresearchcompany.com/graphimages/Green_Bonds_Market_2025_Graph.webp",
+            "views": 2250,
+            "createdAt": "17.12.2022",
+            "userId": "1",
+            "type": ["ECONOMICS"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Финансирование экопроектов",
+                    "paragraphs": [
+                        "Объем рынка зеленых облигаций превысил $2 трлн благодаря новым регуляторным стандартам."
+                    ]
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "CODE",
-          "code": "// Новый декоратор\n@logged\nclass Person {\n  constructor(public name: string) {}\n\n  @bound\n  greet() {\n    console.log(`Hello, ${this.name}!`);\n  }\n}"
-        }
-      ]
-    },
-    {
-      "id": "18",
-      "title": "ИИ для термоядерного синтеза",
-      "subtitle": "Управление плазмой",
-      "img": "https://media.wired.com/photos/620cf87dd88b0a9fa5094bd1/3:2/w_2560%2Cc_limit/Science_TCV-purple-plasma-visible-light-cam.jpg",
-      "views": 3980,
-      "createdAt": "06.08.2023",
-      "userId": "2",
-      "type": [
-        "SCIENCE"
-      ],
-      "blocks": [
+            "id": "11",
+            "title": "WebAssembly: Будущее веба",
+            "subtitle": "Запуск С++ приложений в браузере",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/1/1f/WebAssembly_Logo.svg",
+            "views": 1980,
+            "createdAt": "05.01.2023",
+            "userId": "2",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Производительность",
+                    "paragraphs": [
+                        "WASM позволяет достичь 85% производительности нативных приложений."
+                    ]
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Токамаки нового поколения",
-          "paragraphs": [
-            "DeepMind разработала ИИ-систему для контроля плазмы в реакторе в реальном времени."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "title": "NFT-рынок: Анализ падения",
-      "subtitle": "Крипто-зима 2023",
-      "img": "https://img.freepik.com/free-vector/nft-concept-illustration_114360-2894.jpg",
-      "views": 2670,
-      "createdAt": "15.09.2023",
-      "userId": "2",
-      "type": [
-        "ECONOMICS"
-      ],
-      "blocks": [
+            "id": "12",
+            "title": "ИИ в медицине: Диагностика рака",
+            "subtitle": "Нейросети против онкологии",
+            "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIDYhcbPqtMTrEEx2HSr8h5GNyEVODTITjKA&s",
+            "views": 5670,
+            "createdAt": "14.02.2023",
+            "userId": "2",
+            "type": ["SCIENCE"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Ранняя диагностика",
+                    "paragraphs": [
+                        "Алгоритмы DeepMind обнаруживают рак легких на 5 лет раньше стандартных методов."
+                    ]
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Статистика продаж",
-          "paragraphs": [
-            "Оборот NFT упал на 92% с января 2022 года после крипто-краха."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "20",
-      "title": "Docker Desktop: Новые тарифы",
-      "subtitle": "Изменения для разработчиков",
-      "img": "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png",
-      "views": 3250,
-      "createdAt": "24.10.2023",
-      "userId": "1",
-      "type": [
-        "IT"
-      ],
-      "blocks": [
+            "id": "13",
+            "title": "Цифровой доллар: Пилотный проект",
+            "subtitle": "Будущее финансовой системы",
+            "img": "https://cdn.wccftech.com/wp-content/uploads/2022/11/image_2022-11-16_020947615.png",
+            "views": 3890,
+            "createdAt": "25.03.2023",
+            "userId": "1",
+            "type": ["ECONOMICS"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Пилотный запуск",
+                    "paragraphs": [
+                        "Тестирование цифрового доллара в 15 банках с 2023 года."
+                    ]
+                }
+            ]
+        },
         {
-          "id": "1",
-          "type": "TEXT",
-          "title": "Бесплатные альтернативы",
-          "paragraphs": [
-            "После введения платных подписок популярность Podman и Rancher Desktop выросла на 300%."
-          ]
+            "id": "14",
+            "title": "Rust в Linux: Первый код",
+            "subtitle": "Системное программирование",
+            "img": "https://www.rust-lang.org/static/images/rust-logo-blk.svg",
+            "views": 2760,
+            "createdAt": "02.04.2023",
+            "userId": "1",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Безопасность памяти",
+                    "paragraphs": [
+                        "Linus Torvalds одобрил первые PR на Rust для ядра Linux."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "15",
+            "title": "CRISPR: Генная терапия",
+            "subtitle": "Лечение наследственных заболеваний",
+            "img": "https://images.squarespace-cdn.com/content/v1/5efc3845201cfd62a7cad809/1604433314478-I8E0KAY56CPXGNQALS2D/maxresdefault.jpg",
+            "views": 4320,
+            "createdAt": "11.05.2023",
+            "userId": "2",
+            "type": ["SCIENCE"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Клинические испытания",
+                    "paragraphs": [
+                        "Успешное применение CRISPR для лечения серповидноклеточной анемии в 45 случаях."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "16",
+            "title": "Мировой кризис цепочек поставок",
+            "subtitle": "Как пандемия изменила логистику",
+            "img": "https://blog.manningtoncommercial.com/hubfs/TheGlobalSupplyChain_Main.png",
+            "views": 3150,
+            "createdAt": "19.06.2023",
+            "userId": "1",
+            "type": ["ECONOMICS"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Решоринг производств",
+                    "paragraphs": [
+                        "Компании инвестируют $240 млрд в возврат производств из Азии."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "17",
+            "title": "TypeScript 5.0: Новинки",
+            "subtitle": "Улучшения системы типов",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+            "views": 2870,
+            "createdAt": "28.07.2023",
+            "userId": "1",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "CODE",
+                    "code": "// Новый декоратор\n@logged\nclass Person {\n  constructor(public name: string) {}\n\n  @bound\n  greet() {\n    console.log(`Hello, ${this.name}!`);\n  }\n}"
+                }
+            ]
+        },
+        {
+            "id": "18",
+            "title": "ИИ для термоядерного синтеза",
+            "subtitle": "Управление плазмой",
+            "img": "https://media.wired.com/photos/620cf87dd88b0a9fa5094bd1/3:2/w_2560%2Cc_limit/Science_TCV-purple-plasma-visible-light-cam.jpg",
+            "views": 3980,
+            "createdAt": "06.08.2023",
+            "userId": "2",
+            "type": ["SCIENCE"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Токамаки нового поколения",
+                    "paragraphs": [
+                        "DeepMind разработала ИИ-систему для контроля плазмы в реакторе в реальном времени."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "19",
+            "title": "NFT-рынок: Анализ падения",
+            "subtitle": "Крипто-зима 2023",
+            "img": "https://img.freepik.com/free-vector/nft-concept-illustration_114360-2894.jpg",
+            "views": 2670,
+            "createdAt": "15.09.2023",
+            "userId": "2",
+            "type": ["ECONOMICS"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Статистика продаж",
+                    "paragraphs": [
+                        "Оборот NFT упал на 92% с января 2022 года после крипто-краха."
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "title": "Docker Desktop: Новые тарифы",
+            "subtitle": "Изменения для разработчиков",
+            "img": "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png",
+            "views": 3250,
+            "createdAt": "24.10.2023",
+            "userId": "1",
+            "type": ["IT"],
+            "blocks": [
+                {
+                    "id": "1",
+                    "type": "TEXT",
+                    "title": "Бесплатные альтернативы",
+                    "paragraphs": [
+                        "После введения платных подписок популярность Podman и Rancher Desktop выросла на 300%."
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "text": "some comment",
-      "articleId": "1",
-      "userId": "1"
-    },
-    {
-      "id": "2",
-      "text": "some comment 2",
-      "articleId": "1",
-      "userId": "1"
-    },
-    {
-      "id": "3",
-      "text": "some comment 3",
-      "articleId": "1",
-      "userId": "1"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "123",
-      "id": "P3-h9Fd"
-    },
-    {
-      "articleId": "1",
-      "userId": "2",
-      "text": "qwe",
-      "id": "4bN4Pqk"
-    },
-    {
-      "articleId": "1",
-      "userId": "2",
-      "text": "123",
-      "id": "zk3yOMJ"
-    },
-    {
-      "articleId": "1",
-      "userId": "2",
-      "text": "привет мир",
-      "id": "stoH5zd"
-    },
-    {
-      "articleId": "2",
-      "userId": "1",
-      "text": "python!!!",
-      "id": "Z5DEyNK"
-    },
-    {
-      "articleId": "3",
-      "userId": "1",
-      "text": "Kotlin!!!",
-      "id": "a3TSULj"
-    },
-    {
-      "articleId": "1",
-      "userId": "1",
-      "text": "0",
-      "id": "tYFTM3W"
-    },
-    {
-      "articleId": "11",
-      "userId": "1",
-      "text": "123",
-      "id": "-OIgfI2"
-    },
-    {
-      "articleId": "14",
-      "userId": "1",
-      "text": "123123",
-      "id": "KQJOXqF"
-    },
-    {
-      "articleId": "14",
-      "userId": "1",
-      "text": "123123",
-      "id": "pWSpS4a"
-    },
-    {
-      "articleId": "14",
-      "userId": "1",
-      "text": "123213",
-      "id": "2XzINkv"
-    },
-    {
-      "articleId": "14",
-      "userId": "1",
-      "text": "qwe",
-      "id": "7dFq36x"
-    },
-    {
-      "articleId": "14",
-      "userId": "1",
-      "text": "22",
-      "id": "p_x1yK4"
-    },
-    {
-      "articleId": "14",
-      "userId": "1",
-      "text": "123",
-      "id": "QB8R0ac"
-    },
-    {
-      "articleId": "14",
-      "userId": "1",
-      "text": "234",
-      "id": "FB3UvLo"
-    }
-  ],
-  "users": [
-    {
-      "id": "1",
-      "username": "admin",
-      "password": "123",
-      "roles": [
-        "ADMIN"
-      ],
-      "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
-    },
-    {
-      "id": "2",
-      "username": "user",
-      "password": "123",
-      "roles": [
-        "USER"
-      ],
-      "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
-    },
-    {
-      "id": "3",
-      "username": "manager",
-      "password": "123",
-      "roles": [
-        "MANAGER"
-      ],
-      "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
-    },
-    {
-      "id": "4",
-      "username": "testuser",
-      "password": "123",
-      "roles": [
-        "MANAGER"
-      ],
-      "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
-    }
-  ],
-  "profile": [
-    {
-      "id": "1",
-      "first": "Саша",
-      "lastname": "Руденко",
-      "age": 23,
-      "currency": "USD",
-      "country": "Ukraine",
-      "city": "Обухов",
-      "username": "admin123",
-      "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
-    },
-    {
-      "id": "2",
-      "first": "Тимур1",
-      "lastname": "Мураев",
-      "age": 22,
-      "currency": "UAH",
-      "country": "Ukraine",
-      "city": "Обухов",
-      "username": "Timur",
-      "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
-    },
-    {
-      "id": "3",
-      "first": "Vita",
-      "lastname": "Ermolenko",
-      "age": 23,
-      "currency": "UAH",
-      "country": "Ukraine",
-      "city": "Киев",
-      "username": "Vita",
-      "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
-    },
-    {
-      "id": "4",
-      "first": "test",
-      "lastname": "user",
-      "age": 30,
-      "currency": "UAH",
-      "country": "Ukraine",
-      "city": "Обухов",
-      "username": "testuser",
-      "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
-    }
-  ],
-  "article-ratings": [
-    {
-      "id": "1",
-      "rate": 4,
-      "feedback": "Хорошая статья",
-      "userId": "1",
-      "articleId": "1"
-    },
-    {
-      "id": "2",
-      "rate": 4,
-      "feedback": "Хорошая статья",
-      "userId": "1",
-      "articleId": "2"
-    },
-    {
-      "userId": "1",
-      "articleId": "3",
-      "rate": 3,
-      "id": "pTXPGmr"
-    },
-    {
-      "userId": "1",
-      "articleId": "4",
-      "rate": 1,
-      "feedback": "отстой",
-      "id": "rStErrM"
-    },
-    {
-      "userId": "1",
-      "articleId": "14",
-      "rate": 4,
-      "id": "IaCyTmU"
-    },
-    {
-      "userId": "1",
-      "articleId": "13",
-      "rate": 4,
-      "id": "h4xLAf6"
-    }
-  ],
-  "profile-ratings": [
-    {
-      "id": "1",
-      "rate": 4,
-      "feedback": "Хорошая статья",
-      "userId": "1",
-      "profileId": "1"
-    },
-    {
-      "id": "2",
-      "rate": 4,
-      "feedback": "Хорошая статья",
-      "userId": "1",
-      "profileId": "2"
-    },
-    {
-      "userId": "2",
-      "profileId": "1",
-      "rate": 5,
-      "feedback": "great profile",
-      "id": "QeSGB-C"
-    }
-  ]
+    ],
+    "comments": [
+        {
+            "id": "1",
+            "text": "some comment",
+            "articleId": "1",
+            "userId": "1"
+        },
+        {
+            "id": "2",
+            "text": "some comment 2",
+            "articleId": "1",
+            "userId": "1"
+        },
+        {
+            "id": "3",
+            "text": "some comment 3",
+            "articleId": "1",
+            "userId": "1"
+        },
+        {
+            "articleId": "1",
+            "userId": "1",
+            "text": "123",
+            "id": "P3-h9Fd"
+        },
+        {
+            "articleId": "1",
+            "userId": "2",
+            "text": "qwe",
+            "id": "4bN4Pqk"
+        },
+        {
+            "articleId": "1",
+            "userId": "2",
+            "text": "123",
+            "id": "zk3yOMJ"
+        },
+        {
+            "articleId": "1",
+            "userId": "2",
+            "text": "привет мир",
+            "id": "stoH5zd"
+        },
+        {
+            "articleId": "2",
+            "userId": "1",
+            "text": "python!!!",
+            "id": "Z5DEyNK"
+        },
+        {
+            "articleId": "3",
+            "userId": "1",
+            "text": "Kotlin!!!",
+            "id": "a3TSULj"
+        },
+        {
+            "articleId": "1",
+            "userId": "1",
+            "text": "0",
+            "id": "tYFTM3W"
+        },
+        {
+            "articleId": "11",
+            "userId": "1",
+            "text": "123",
+            "id": "-OIgfI2"
+        },
+        {
+            "articleId": "14",
+            "userId": "1",
+            "text": "123123",
+            "id": "KQJOXqF"
+        },
+        {
+            "articleId": "14",
+            "userId": "1",
+            "text": "123123",
+            "id": "pWSpS4a"
+        },
+        {
+            "articleId": "14",
+            "userId": "1",
+            "text": "123213",
+            "id": "2XzINkv"
+        },
+        {
+            "articleId": "14",
+            "userId": "1",
+            "text": "qwe",
+            "id": "7dFq36x"
+        },
+        {
+            "articleId": "14",
+            "userId": "1",
+            "text": "22",
+            "id": "p_x1yK4"
+        },
+        {
+            "articleId": "14",
+            "userId": "1",
+            "text": "123",
+            "id": "QB8R0ac"
+        },
+        {
+            "articleId": "14",
+            "userId": "1",
+            "text": "234",
+            "id": "FB3UvLo"
+        }
+    ],
+    "users": [
+        {
+            "id": "1",
+            "username": "admin",
+            "password": "123",
+            "roles": ["ADMIN"],
+            "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
+        },
+        {
+            "id": "2",
+            "username": "user",
+            "password": "123",
+            "roles": ["USER"],
+            "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
+        },
+        {
+            "id": "3",
+            "username": "manager",
+            "password": "123",
+            "roles": ["MANAGER"],
+            "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
+        },
+        {
+            "id": "4",
+            "username": "testuser",
+            "password": "123",
+            "roles": ["MANAGER"],
+            "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
+        }
+    ],
+    "profile": [
+        {
+            "id": "1",
+            "first": "Саша",
+            "lastname": "Руденко",
+            "age": 23,
+            "currency": "USD",
+            "country": "Ukraine",
+            "city": "Обухов",
+            "username": "admin123",
+            "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
+        },
+        {
+            "id": "2",
+            "first": "Тимур1",
+            "lastname": "Мураев",
+            "age": 22,
+            "currency": "UAH",
+            "country": "Ukraine",
+            "city": "Обухов",
+            "username": "Timur",
+            "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
+        },
+        {
+            "id": "3",
+            "first": "Vita",
+            "lastname": "Ermolenko",
+            "age": 23,
+            "currency": "UAH",
+            "country": "Ukraine",
+            "city": "Киев",
+            "username": "Vita",
+            "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
+        },
+        {
+            "id": "4",
+            "first": "test",
+            "lastname": "user",
+            "age": 30,
+            "currency": "UAH",
+            "country": "Ukraine",
+            "city": "Обухов",
+            "username": "testuser",
+            "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
+        }
+    ],
+    "article-ratings": [
+        {
+            "id": "1",
+            "rate": 4,
+            "feedback": "Хорошая статья",
+            "userId": "1",
+            "articleId": "1"
+        },
+        {
+            "id": "2",
+            "rate": 4,
+            "feedback": "Хорошая статья",
+            "userId": "1",
+            "articleId": "2"
+        },
+        {
+            "userId": "1",
+            "articleId": "3",
+            "rate": 3,
+            "id": "pTXPGmr"
+        },
+        {
+            "userId": "1",
+            "articleId": "4",
+            "rate": 1,
+            "feedback": "отстой",
+            "id": "rStErrM"
+        },
+        {
+            "userId": "1",
+            "articleId": "14",
+            "rate": 4,
+            "id": "IaCyTmU"
+        },
+        {
+            "userId": "1",
+            "articleId": "13",
+            "rate": 4,
+            "id": "h4xLAf6"
+        }
+    ],
+    "profile-ratings": [
+        {
+            "id": "1",
+            "rate": 4,
+            "feedback": "Хорошая статья",
+            "userId": "1",
+            "profileId": "1"
+        },
+        {
+            "id": "2",
+            "rate": 4,
+            "feedback": "Хорошая статья",
+            "userId": "1",
+            "profileId": "2"
+        },
+        {
+            "userId": "2",
+            "profileId": "1",
+            "rate": 5,
+            "feedback": "great profile",
+            "id": "QeSGB-C"
+        }
+    ]
 }

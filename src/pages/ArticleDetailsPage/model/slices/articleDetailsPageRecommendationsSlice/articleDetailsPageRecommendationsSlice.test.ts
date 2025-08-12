@@ -91,8 +91,12 @@ describe('articleDetailsPageRecommendationsSlice.test', () => {
             error: 'error',
         };
 
-        expect(articleDetailsPageRecommendationsReducer(state as ArticleDetailsRecommendationsSchema, fetchArticleRecommendations
-            .pending)).toEqual({
+        expect(
+            articleDetailsPageRecommendationsReducer(
+                state as ArticleDetailsRecommendationsSchema,
+                fetchArticleRecommendations.pending,
+            ),
+        ).toEqual({
             isLoading: true,
             error: undefined,
         });
@@ -104,8 +108,12 @@ describe('articleDetailsPageRecommendationsSlice.test', () => {
             ids: [],
         };
 
-        expect(articleDetailsPageRecommendationsReducer(state as ArticleDetailsRecommendationsSchema, fetchArticleRecommendations
-            .fulfilled(articles, ''))).toEqual({
+        expect(
+            articleDetailsPageRecommendationsReducer(
+                state as ArticleDetailsRecommendationsSchema,
+                fetchArticleRecommendations.fulfilled(articles, ''),
+            ),
+        ).toEqual({
             isLoading: false,
             entities: {
                 1: articles[0],

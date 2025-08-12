@@ -8,10 +8,18 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [(Story) => <div style={{ padding: '200px' }}><Story /></div>],
+    decorators: [
+        (Story) => (
+            <div style={{ padding: '200px' }}>
+                <Story />
+            </div>
+        ),
+    ],
 } as ComponentMeta<typeof CurrencySelect>;
 
-const Template: ComponentStory<typeof CurrencySelect> = (args) => <CurrencySelect {...args} />;
+const Template: ComponentStory<typeof CurrencySelect> = (args) => (
+    <CurrencySelect {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};

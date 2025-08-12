@@ -14,14 +14,14 @@ export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
     const toggle = async () => {
         let nextLang: string;
         switch (i18n.language) {
-        case 'en':
-            nextLang = 'ua';
-            break;
-        case 'ua':
-            nextLang = 'ru';
-            break;
-        default:
-            nextLang = 'en';
+            case 'en':
+                nextLang = 'ua';
+                break;
+            case 'ua':
+                nextLang = 'ru';
+                break;
+            default:
+                nextLang = 'en';
         }
 
         await i18n.changeLanguage(nextLang);
@@ -33,9 +33,7 @@ export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
             className={classNames('', {}, [className])}
             onClick={toggle}
         >
-            {short
-                ? t('Short language')
-                : t('Language')}
+            {short ? t('Short language') : t('Language')}
         </Button>
     );
 });

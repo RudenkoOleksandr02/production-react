@@ -14,9 +14,7 @@ interface NotificationButtonProps {
 }
 
 export const NotificationButton = memo((props: NotificationButtonProps) => {
-    const {
-        className,
-    } = props;
+    const { className } = props;
     const [isOpenDrawer, setIsOpenDrawer] = useState(false);
 
     const onOpenDrawer = () => {
@@ -37,7 +35,9 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
         <>
             <BrowserView>
                 <Popover
-                    className={classNames(cls.NotificationButton, {}, [className])}
+                    className={classNames(cls.NotificationButton, {}, [
+                        className,
+                    ])}
                     direction="bottom left"
                     trigger={trigger}
                 >

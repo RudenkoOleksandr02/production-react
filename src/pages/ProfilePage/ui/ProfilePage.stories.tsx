@@ -15,24 +15,28 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [StoreDecorator({
-        profile: {
-            form: {
-                id: '1',
-                first: 'Sasha',
-                lastname: 'Rudenko',
-                username: 'admin',
-                age: 23,
-                country: Country.Ukraine,
-                currency: Currency.USD,
-                city: 'Obukhiv',
-                avatar,
+    decorators: [
+        StoreDecorator({
+            profile: {
+                form: {
+                    id: '1',
+                    first: 'Sasha',
+                    lastname: 'Rudenko',
+                    username: 'admin',
+                    age: 23,
+                    country: Country.Ukraine,
+                    currency: Currency.USD,
+                    city: 'Obukhiv',
+                    avatar,
+                },
             },
-        },
-    })],
+        }),
+    ],
 } as ComponentMeta<typeof ProfilePage>;
 
-const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
+const Template: ComponentStory<typeof ProfilePage> = (args) => (
+    <ProfilePage {...args} />
+);
 
 const parameters = {
     mockData: [
