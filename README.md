@@ -229,6 +229,22 @@ Custom helper scripts are in `scripts/` for code generation, reporting, refactor
 
 ---
 
+## Working with feature-flags
+
+Feature flags are only allowed to be used with the toggleFeatures helper an object with options is passed to it.
+
+{
+    name: feature flag name,
+    on: function that will work after the feature is enabled
+    of: function that will work after the feature is turned off
+}
+
+To automatically remove a feature, use the Remove-feature.ts script, which takes 2 arguments
+1. Name of the removed feature flag
+2. State (on\off)
+
+---
+
 ## Entities & Features
 
 ### Entities

@@ -4,6 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { ArticleType, Article, ArticleBlockType } from '@/entities/Article';
 import ArticleDetailsPage from './ArticleDetailsPage';
+import { setFeatureFlags } from '@/shared/lib/features';
 
 export default {
     title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
@@ -85,6 +86,10 @@ const parameters = {
 export const Primary = Template.bind({});
 Primary.args = {};
 Primary.decorators = [
+    (Story) => {
+        setFeatureFlags({ isArticleRatingEnabled: true });
+        return <Story />;
+    },
     StoreDecorator({
         articleDetails: {
             data: article,
