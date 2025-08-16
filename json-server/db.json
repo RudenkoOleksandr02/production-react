@@ -560,6 +560,10 @@
             "username": "admin",
             "password": "123",
             "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
         },
         {
@@ -567,6 +571,10 @@
             "username": "user",
             "password": "123",
             "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": false
+            },
             "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
         },
         {
@@ -574,6 +582,10 @@
             "username": "manager",
             "password": "123",
             "roles": ["MANAGER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": true
+            },
             "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
         },
         {
@@ -581,6 +593,10 @@
             "username": "testuser",
             "password": "123",
             "roles": ["MANAGER"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
         }
     ],
