@@ -38,15 +38,14 @@ export default {
         config!.module!.rules!.push(buildCssLoader(true));
 
         // @ts-ignore
-        config!.module!.rules = config!.module!.rules!.map(
-            (rule: RuleSetRule) => {
-                if (/svg/.test(rule.test as string)) {
-                    return { ...rule, exclude: /\.svg$/i };
-                }
+        config!.module!.rules = config!.module!.rules!.map((rule) => {
+            const typedRule = rule as RuleSetRule;
+            if (/svg/.test(typedRule.test as string)) {
+                return { ...typedRule, exclude: /\.svg$/i };
+            }
 
-                return rule;
-            },
-        );
+            return typedRule;
+        });
         config!.module!.rules!.push({
             test: /\.svg$/,
             use: ['@svgr/webpack'],
