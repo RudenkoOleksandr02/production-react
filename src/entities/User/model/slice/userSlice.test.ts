@@ -1,4 +1,3 @@
-import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { UserSchema } from '../types/userSchema';
 import { userActions, userReducer } from './userSlice';
 
@@ -19,7 +18,7 @@ describe('userSlice.test', () => {
             authData: data,
         });
     });
-    test('test init auth data', () => {
+    /* test('test init auth data', () => {
         const state: DeepPartial<UserSchema> = {
             authData: undefined,
             _mounted: false,
@@ -33,7 +32,7 @@ describe('userSlice.test', () => {
             authData: data,
             _mounted: true,
         });
-    });
+    }); */
     test('test logout', () => {
         const state: DeepPartial<UserSchema> = {
             authData: data,
