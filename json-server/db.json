@@ -607,7 +607,8 @@
         "isCounterEnabled": true
       },
       "jsonSettings": {
-        "theme": "app_orange_theme"
+        "theme": "app_orange_theme",
+        "isArticlesPageHasBeenOpen": true
       },
       "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
     },
@@ -625,7 +626,8 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isVisitFirst": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageHasBeenOpen": true
       },
       "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
     },
@@ -643,7 +645,8 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isVisitFirst": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageHasBeenOpen": true
       },
       "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
     },
@@ -659,9 +662,10 @@
         "isCounterEnabled": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isVisitFirst": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageHasBeenOpen": true
       },
       "avatar": "https://scx2.b-cdn.net/gfx/news/hires/2018/hack.jpg"
     }
