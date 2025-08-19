@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './SidebarRedesigned.module.scss';
 import { SidebarItemType } from '../../model/types/sidebar';
-import { AppLogo } from '@/shared/ui/AppLogo';
+import { AppLogo } from '@/shared/ui/deprecated/AppLogo';
 
 interface SidebarRedesignedProps {
     className?: string;
