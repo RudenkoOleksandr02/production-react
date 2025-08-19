@@ -1,8 +1,11 @@
+import React from 'react';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator';
 import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator';
 import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator';
 import { Theme } from '../../src/shared/const/theme';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
+import { setFeatureFlags } from '@/shared/lib/features';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -27,5 +30,10 @@ export const decorators = [
     StyleDecorator,
     ThemeDecorator(Theme.LIGHT),
     RouterDecorator,
+    StoreDecorator({}),
     SuspenseDecorator,
+    (Story) => {
+        setFeatureFlags({ isAppRedesigned: false });
+        return <Story />;
+    },
 ];

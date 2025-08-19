@@ -1,38 +1,35 @@
 import { useTranslation } from 'react-i18next';
-import { memo, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { LoginModal } from '@/features/AuthByUserName';
-import { getUserAuthData } from '@/entities/User';
+import cls from './NavbarDeprecated.module.scss';
 import { Text, TextTheme } from '@/shared/ui/Text';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
+import { getRouteArticleCreate } from '@/shared/const/router';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
-import cls from './Navbar.module.scss';
-import { getRouteArticleCreate } from '@/shared/const/router';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { LoginModal } from '@/features/AuthByUserName';
+import { User } from '@/entities/User';
 
-interface NavbarProps {
+interface NavbarDeprecatedProps {
     className?: string;
+    authData?: User;
+    onShowModal: VoidFunction;
+    onCloseModal: VoidFunction;
+    isModalOpen: boolean;
 }
 
-export const Navbar = memo(({ className }: NavbarProps) => {
+export const NavbarDeprecated = memo((props: NavbarDeprecatedProps) => {
+    const { className, authData, onShowModal, onCloseModal, isModalOpen } =
+        props;
     const { t } = useTranslation();
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const authData = useSelector(getUserAuthData);
-
-    const onCloseModal = () => {
-        setIsModalOpen(false);
-    };
-
-    const onShowModal = () => {
-        setIsModalOpen(true);
-    };
 
     if (authData) {
         return (
-            <header className={classNames(cls.Navbar, {}, [className])}>
+            <header
+                className={classNames(cls.NavbarDeprecated, {}, [className])}
+            >
                 <Text
                     className={cls.appName}
                     title={t('Developer APP')}
@@ -54,7 +51,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }
 
     return (
-        <header className={classNames(cls.Navbar, {}, [className])}>
+        <header className={classNames(cls.NavbarDeprecated, {}, [className])}>
             <Button
                 className={cls.links}
                 theme={ButtonTheme.CLEAR_INVERTED}
