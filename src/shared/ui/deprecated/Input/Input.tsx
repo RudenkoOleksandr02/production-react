@@ -22,7 +22,7 @@ interface InputProps extends HTMLInputProps {
 }
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 export const Input = memo((props: InputProps) => {

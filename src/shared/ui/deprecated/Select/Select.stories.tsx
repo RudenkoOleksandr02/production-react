@@ -1,11 +1,9 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { Select } from './Select';
-import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'shared/Select',
+    title: 'shared/deprecated/Select',
     component: Select,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -22,23 +20,3 @@ Primary.args = {
         { value: '2', content: 'second option' },
     ],
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-    label: 'Enter a value',
-    options: [
-        { value: '1', content: 'first option' },
-        { value: '2', content: 'second option' },
-    ],
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Orange = Template.bind({});
-Orange.args = {
-    label: 'Enter a value',
-    options: [
-        { value: '1', content: 'first option' },
-        { value: '2', content: 'second option' },
-    ],
-};
-Orange.decorators = [ThemeDecorator(Theme.ORANGE)];

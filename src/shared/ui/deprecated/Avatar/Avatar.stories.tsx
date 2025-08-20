@@ -1,12 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { Avatar } from './Avatar';
 import AvatarImg from './storybook.png';
-import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'shared/Avatar',
+    title: 'shared/deprecated/Avatar',
     component: Avatar,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -20,20 +18,6 @@ Primary.args = {
     src: AvatarImg,
     size: 150,
 };
-
-export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {
-    src: AvatarImg,
-    size: 150,
-};
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const PrimaryOrange = Template.bind({});
-PrimaryOrange.args = {
-    src: AvatarImg,
-    size: 150,
-};
-PrimaryOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
 
 export const Small = Template.bind({});
 Small.args = {

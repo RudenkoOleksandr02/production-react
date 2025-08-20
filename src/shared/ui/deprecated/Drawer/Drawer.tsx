@@ -20,7 +20,7 @@ interface DrawerProps {
 const height = window.innerHeight - 100;
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 const DrawerContent = memo((props: DrawerProps) => {
@@ -120,7 +120,7 @@ const DrawerAsync = (props: DrawerProps) => {
 };
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 export const Drawer = (props: DrawerProps) => {

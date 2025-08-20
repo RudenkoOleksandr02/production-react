@@ -27,7 +27,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 export const Button = memo((props: ButtonProps) => {

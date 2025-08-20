@@ -1,15 +1,13 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
 import { Card, CardTheme } from '../Card/Card';
 import { Text } from '../Text/Text';
 
 import { Drawer } from './Drawer';
-import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'shared/Drawer',
+    title: 'shared/deprecated/Drawer',
     component: Drawer,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -38,17 +36,3 @@ Primary.args = {
     children,
     isOpen: true,
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-    children,
-    isOpen: true,
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Orange = Template.bind({});
-Orange.args = {
-    children,
-    isOpen: true,
-};
-Orange.decorators = [ThemeDecorator(Theme.ORANGE)];

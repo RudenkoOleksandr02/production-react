@@ -1,13 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import Svg from './profile-20-20.svg';
 
 import { Icon } from './Icon';
-import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'shared/Icon',
+    title: 'shared/deprecated/Icon',
     component: Icon,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -26,29 +24,3 @@ Inverted.args = {
     Svg,
     inverted: true,
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-    Svg,
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const DarkInverted = Template.bind({});
-DarkInverted.args = {
-    Svg,
-    inverted: true,
-};
-DarkInverted.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Orange = Template.bind({});
-Orange.args = {
-    Svg,
-};
-Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
-
-export const OrangeInverted = Template.bind({});
-OrangeInverted.args = {
-    Svg,
-    inverted: true,
-};
-OrangeInverted.decorators = [ThemeDecorator(Theme.ORANGE)];

@@ -1,12 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { Button, ButtonSize, ButtonTheme } from './Button';
-import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'shared/Button',
+    title: 'shared/deprecated/Button',
     component: Button,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -69,20 +67,6 @@ OutlineSizeXl.args = {
     theme: ButtonTheme.OUTLINE,
     size: ButtonSize.XL,
 };
-
-export const OutlineDark = Template.bind({});
-OutlineDark.args = {
-    children: 'Text',
-    theme: ButtonTheme.OUTLINE,
-};
-OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const OutlineOrange = Template.bind({});
-OutlineOrange.args = {
-    children: 'Text',
-    theme: ButtonTheme.OUTLINE,
-};
-OutlineOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
 
 export const Square = Template.bind({});
 Square.args = {

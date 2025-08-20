@@ -13,7 +13,7 @@ interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
 }
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 export const AppImage = memo((props: AppImageProps) => {

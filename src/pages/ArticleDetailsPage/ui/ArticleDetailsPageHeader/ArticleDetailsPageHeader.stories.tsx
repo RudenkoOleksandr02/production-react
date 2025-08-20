@@ -24,11 +24,11 @@ Primary.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [ThemeDecorator({ theme: Theme.DARK })];
 
 export const Orange = Template.bind({});
 Orange.args = {};
-Orange.decorators = [ThemeDecorator(Theme.ORANGE)];
+Orange.decorators = [ThemeDecorator({ theme: Theme.ORANGE })];
 
 export const CanEdit = Template.bind({});
 CanEdit.args = {};

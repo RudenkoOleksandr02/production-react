@@ -14,7 +14,7 @@ interface StarRatingProps {
 const starts = [1, 2, 3, 4, 5];
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 export const StarRating = memo((props: StarRatingProps) => {

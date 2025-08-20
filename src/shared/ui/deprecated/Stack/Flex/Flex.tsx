@@ -48,7 +48,7 @@ export interface FlexProps extends DivProps {
 }
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 export const Flex = (props: FlexProps) => {

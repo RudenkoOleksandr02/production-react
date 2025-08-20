@@ -15,7 +15,7 @@ interface AvatarProps {
 }
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 export const Avatar = (props: AvatarProps) => {

@@ -1,12 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { Code } from './Code';
-import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'shared/Code',
+    title: 'shared/deprecated/Code',
     component: Code,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -35,15 +33,3 @@ export const Primary = Template.bind({});
 Primary.args = {
     text,
 };
-
-export const Dark = Template.bind({});
-Dark.args = {
-    text,
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Orange = Template.bind({});
-Orange.args = {
-    text,
-};
-Orange.decorators = [ThemeDecorator(Theme.ORANGE)];

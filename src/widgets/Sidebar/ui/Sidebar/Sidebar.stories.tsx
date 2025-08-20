@@ -1,10 +1,9 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { Sidebar } from './Sidebar';
-import { Theme } from '@/shared/const/theme';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 
 export default {
     title: 'widgets/Sidebar',
@@ -12,6 +11,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [ThemeDecorator({ isRedesigned: true })],
 } as ComponentMeta<typeof Sidebar>;
 
 const Template: ComponentStory<typeof Sidebar> = () => <Sidebar />;
@@ -19,24 +19,6 @@ const Template: ComponentStory<typeof Sidebar> = () => <Sidebar />;
 export const Light = Template.bind({});
 Light.args = {};
 Light.decorators = [
-    StoreDecorator({
-        user: { authData: {} },
-    }),
-];
-
-export const Dark = Template.bind({});
-Dark.args = {};
-Dark.decorators = [
-    ThemeDecorator(Theme.DARK),
-    StoreDecorator({
-        user: { authData: {} },
-    }),
-];
-
-export const Orange = Template.bind({});
-Orange.args = {};
-Orange.decorators = [
-    ThemeDecorator(Theme.ORANGE),
     StoreDecorator({
         user: { authData: {} },
     }),

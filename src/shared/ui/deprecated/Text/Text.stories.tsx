@@ -1,12 +1,10 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { Text, TextSize, TextTheme } from './Text';
-import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'shared/Text',
+    title: 'shared/deprecated/Text',
     component: Text,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -37,60 +35,6 @@ export const OnlyText = Template.bind({});
 OnlyText.args = {
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
 };
-
-export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-};
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const ErrorDark = Template.bind({});
-ErrorDark.args = {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-    theme: TextTheme.ERROR,
-};
-ErrorDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const OnlyTitleDark = Template.bind({});
-OnlyTitleDark.args = {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-};
-OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const OnlyTextDark = Template.bind({});
-OnlyTextDark.args = {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-};
-OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const PrimaryOrange = Template.bind({});
-PrimaryOrange.args = {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-};
-PrimaryOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
-
-export const ErrorOrange = Template.bind({});
-ErrorOrange.args = {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-    theme: TextTheme.ERROR,
-};
-ErrorOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
-
-export const OnlyTitleOrange = Template.bind({});
-OnlyTitleOrange.args = {
-    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-};
-OnlyTitleOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
-
-export const OnlyTextOrange = Template.bind({});
-OnlyTextOrange.args = {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-};
-OnlyTextOrange.decorators = [ThemeDecorator(Theme.ORANGE)];
 
 export const SizeL = Template.bind({});
 SizeL.args = {

@@ -18,7 +18,7 @@ interface SelectProps<T extends string> {
 }
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 export const Select = <T extends string>(props: SelectProps<T>) => {

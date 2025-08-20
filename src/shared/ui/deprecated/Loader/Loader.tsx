@@ -6,7 +6,7 @@ interface LoaderProps {
 }
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 export const Loader = ({ className }: LoaderProps) => (

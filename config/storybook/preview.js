@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator';
 import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator';
@@ -28,12 +27,12 @@ export const parameters = {
 
 export const decorators = [
     StyleDecorator,
-    ThemeDecorator(Theme.LIGHT),
+    ThemeDecorator({ theme: Theme.LIGHT }),
     RouterDecorator,
     StoreDecorator({}),
     SuspenseDecorator,
     (Story) => {
-        setFeatureFlags({ isAppRedesigned: false });
+        setFeatureFlags({ isAppRedesigned: true });
         return <Story />;
     },
 ];

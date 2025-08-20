@@ -16,7 +16,7 @@ interface TabsProps<T extends string> {
 }
 
 /**
- * Deprecated, please use new components from redesigned
+ * SidebarItemDeprecated, please use new components from redesigned
  * @deprecated
  */
 export const Tabs = <T extends string>(props: TabsProps<T>) => {
