@@ -6,10 +6,6 @@ interface PortalProps {
     element?: HTMLElement;
 }
 
-/**
- * SidebarItemDeprecated, please use new components from redesigned
- * @deprecated
- */
 export const Portal = (props: PortalProps) => {
     const { children, element = document.body } = props;
 

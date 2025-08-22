@@ -10,7 +10,7 @@ interface SkeletonProps {
 }
 
 /**
- * SidebarItemDeprecated, please use new components from redesigned
+ * Deprecated, please use new components from redesigned
  * @deprecated
  */
 export const Skeleton = memo((props: SkeletonProps) => {

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './NavbarRedesigned.module.scss';
-import { HStack } from '@/shared/ui/deprecated/Stack';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';

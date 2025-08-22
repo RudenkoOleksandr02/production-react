@@ -2,7 +2,7 @@ import { memo, ReactNode } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './SidebarRedesigned.module.scss';
 import { AppLogo } from '@/shared/ui/redesigned/AppLogo';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
 import { Icon } from '@/shared/ui/redesigned/Icon';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';

@@ -47,10 +47,6 @@ export interface FlexProps extends DivProps {
     max?: boolean;
 }
 
-/**
- * SidebarItemDeprecated, please use new components from redesigned
- * @deprecated
- */
 export const Flex = (props: FlexProps) => {
     const {
         className,

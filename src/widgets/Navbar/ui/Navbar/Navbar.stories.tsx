@@ -5,6 +5,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { Notification } from '@/entities/Notification';
 import { Navbar } from './Navbar';
 import img from './storybook.png';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 
 export default {
     title: 'widgets/Navbar',
@@ -12,6 +13,14 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [
+        (Story) => (
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Story />
+            </div>
+        ),
+        ThemeDecorator({ isRedesigned: true }),
+    ],
 } as ComponentMeta<typeof Navbar>;
 
 const list: Notification[] = [

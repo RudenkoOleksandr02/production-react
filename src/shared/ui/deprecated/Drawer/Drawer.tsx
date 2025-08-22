@@ -4,9 +4,9 @@ import {
     AnimationProvider,
     useAnimationLibs,
 } from '@/shared/lib/components/AnimationProvider';
-import { Overlay } from '../Overlay/Overlay';
+import { Overlay } from '../../redesigned/Overlay/Overlay';
 import cls from './Drawer.module.scss';
-import { Portal } from '../Portal/Portal';
+import { Portal } from '../../redesigned/Portal/Portal';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
 interface DrawerProps {
@@ -20,7 +20,7 @@ interface DrawerProps {
 const height = window.innerHeight - 100;
 
 /**
- * SidebarItemDeprecated, please use new components from redesigned
+ * Deprecated, please use new components from redesigned
  * @deprecated
  */
 const DrawerContent = memo((props: DrawerProps) => {

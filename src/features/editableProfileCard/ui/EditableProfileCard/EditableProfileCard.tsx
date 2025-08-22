@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';

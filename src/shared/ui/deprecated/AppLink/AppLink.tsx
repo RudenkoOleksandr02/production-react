@@ -15,7 +15,7 @@ interface AppLinkProps extends LinkProps {
 }
 
 /**
- * SidebarItemDeprecated, please use new components from redesigned
+ * Deprecated, please use new components from redesigned
  * @deprecated
  */
 export const AppLink = memo((props: AppLinkProps) => {

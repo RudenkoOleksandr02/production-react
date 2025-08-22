@@ -22,7 +22,7 @@ interface DropdownProps {
 }
 
 /**
- * SidebarItemDeprecated, please use new components from redesigned
+ * Deprecated, please use new components from redesigned
  * @deprecated
  */
 export function Dropdown(props: DropdownProps) {

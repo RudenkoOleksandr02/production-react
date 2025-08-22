@@ -12,10 +12,6 @@ interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
     errorFallback?: ReactNode;
 }
 
-/**
- * SidebarItemDeprecated, please use new components from redesigned
- * @deprecated
- */
 export const AppImage = memo((props: AppImageProps) => {
     const {
         className,

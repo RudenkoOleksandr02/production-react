@@ -7,10 +7,6 @@ interface OverlayProps {
     onClick?: () => void;
 }
 
-/**
- * SidebarItemDeprecated, please use new components from redesigned
- * @deprecated
- */
 export const Overlay = memo((props: OverlayProps) => {
     const { className, onClick } = props;
 

@@ -10,7 +10,7 @@ interface CodeProps {
 }
 
 /**
- * SidebarItemDeprecated, please use new components from redesigned
+ * Deprecated, please use new components from redesigned
  * @deprecated
  */
 export const Code = memo((props: CodeProps) => {
