@@ -5,7 +5,7 @@ import { MainLayout } from './MainLayout';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 
 export default {
-    title: 'shared/MainLayout',
+    title: 'shared/layouts/MainLayout',
     component: MainLayout,
     argTypes: {
         backgroundColor: { control: 'color' },

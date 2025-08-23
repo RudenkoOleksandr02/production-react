@@ -27,6 +27,18 @@ Outlined.args = {
     variant: 'outlined',
 };
 
+export const Light = Template.bind({});
+Light.args = {
+    children: <Text title="text" text="text text" />,
+    variant: 'light',
+};
+
+export const Round = Template.bind({});
+Round.args = {
+    children: <Text title="text" text="text text" />,
+    border: 'round',
+};
+
 export const Padding0 = Template.bind({});
 Padding0.args = {
     children: <Text title="text" text="text text" />,

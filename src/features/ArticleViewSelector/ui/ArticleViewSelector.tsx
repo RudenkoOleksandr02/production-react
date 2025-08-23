@@ -1,11 +1,12 @@
-import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import { memo, SVGProps, VFC } from 'react';
 import { ArticleView } from '@/entities/Article';
-import ListIcon from '@/shared/assets/icons/list-24-24.svg';
-import TiledIcon from '@/shared/assets/icons/tiled-24-24.svg';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
-import { Icon } from '@/shared/ui/deprecated/Icon';
-import cls from './ArticleViewSelector.module.scss';
+import ListIconDeprecated from '@/shared/assets/icons/list-24-24.svg';
+import TiledIconDeprecated from '@/shared/assets/icons/tiled-24-24.svg';
+import ListIcon from '@/shared/assets/icons/burger.svg';
+import TiledIcon from '@/shared/assets/icons/tile.svg';
+import { ToggleFeatures, toggleFeatures } from '@/shared/lib/features';
+import { ArticleViewSelectorDeprecated } from './ArticleViewSelectorDeprecated/ArticleViewSelectorDeprecated';
+import { ArticleViewSelectorRedesigned } from './ArticleViewSelectorRedesigned/ArticleViewSelectorRedesigned';
 
 interface ArticleViewSelectorProps {
     className?: string;
@@ -13,14 +14,27 @@ interface ArticleViewSelectorProps {
     onViewClick?: (view: ArticleView) => void;
 }
 
-const viewTypes = [
+export interface ViewType {
+    view: ArticleView;
+    Icon: VFC<SVGProps<SVGSVGElement>>;
+}
+
+const viewTypes: ViewType[] = [
     {
         view: ArticleView.SMALL,
-        Icon: TiledIcon,
+        Icon: toggleFeatures({
+            name: 'isAppRedesigned',
+            on: () => TiledIcon,
+            off: () => TiledIconDeprecated,
+        }),
     },
     {
         view: ArticleView.BIG,
-        Icon: ListIcon,
+        Icon: toggleFeatures({
+            name: 'isAppRedesigned',
+            on: () => ListIcon,
+            off: () => ListIconDeprecated,
+        }),
     },
 ];
 
@@ -32,23 +46,22 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     };
 
     return (
-        <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
-            {viewTypes.map((viewType) => (
-                <Button
-                    theme={ButtonTheme.CLEAR}
-                    onClick={onClick(viewType.view)}
-                    key={viewType.view}
-                >
-                    <Icon
-                        width={24}
-                        height={24}
-                        Svg={viewType.Icon}
-                        className={classNames('', {
-                            [cls.notSelected]: viewType.view !== view,
-                        })}
-                    />
-                </Button>
-            ))}
-        </div>
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <ArticleViewSelectorRedesigned
+                    view={view}
+                    viewTypes={viewTypes}
+                    onClick={onClick}
+                />
+            }
+            off={
+                <ArticleViewSelectorDeprecated
+                    view={view}
+                    viewTypes={viewTypes}
+                    onClick={onClick}
+                />
+            }
+        />
     );
 });

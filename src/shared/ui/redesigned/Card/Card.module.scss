@@ -1,13 +1,18 @@
-.Card {
-    border-radius: 12px;
-}
-
 .normal {
     background: var(--dark-bg-redesigned);
+    border-radius: 12px;
 }
 
 .outlined {
     border: 1px solid var(--accent-redesigned);
+}
+
+.light {
+    background: var(--light-bg-redesigned);
+}
+
+.round {
+    border-radius: 40px;
 }
 
 .max {

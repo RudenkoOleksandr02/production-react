@@ -27,6 +27,12 @@ Outline.args = {
     variant: 'outline',
 };
 
+export const Filled = Template.bind({});
+Filled.args = {
+    children: 'Text',
+    variant: 'filled',
+};
+
 export const OutlineL = Template.bind({});
 OutlineL.args = {
     children: 'Text',
