@@ -3,6 +3,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from './Button';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import SvgIcon from './arrow-bottom.svg';
+import { Icon } from '../Icon';
 
 export default {
     title: 'shared/Button',
@@ -45,4 +47,18 @@ OutlineXL.args = {
     children: 'Text',
     variant: 'outline',
     size: 'xl',
+};
+
+export const WithAddonLeft = Template.bind({});
+WithAddonLeft.args = {
+    children: 'Text',
+    variant: 'outline',
+    addonLeft: <Icon Svg={SvgIcon} />,
+};
+
+export const WithAddonRight = Template.bind({});
+WithAddonRight.args = {
+    children: 'Text',
+    variant: 'outline',
+    addonRight: <Icon Svg={SvgIcon} />,
 };
