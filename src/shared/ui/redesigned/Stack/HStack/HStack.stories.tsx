@@ -66,6 +66,19 @@ Gap16.args = {
     ),
 };
 
+export const Gap24 = Template.bind({});
+Gap24.args = {
+    gap: '24',
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};
+
 export const Gap32 = Template.bind({});
 Gap32.args = {
     gap: '32',
