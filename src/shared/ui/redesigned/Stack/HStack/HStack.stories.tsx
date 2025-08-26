@@ -91,3 +91,143 @@ Gap32.args = {
         </>
     ),
 };
+
+export const JustifyStart = Template.bind({});
+JustifyStart.args = {
+    gap: '8',
+    justify: 'start',
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};
+
+export const JustifyEnd = Template.bind({});
+JustifyEnd.args = {
+    gap: '8',
+    justify: 'end',
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};
+
+export const JustifyCenter = Template.bind({});
+JustifyCenter.args = {
+    gap: '8',
+    justify: 'center',
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};
+
+export const JustifyBetween = Template.bind({});
+JustifyBetween.args = {
+    gap: '8',
+    justify: 'between',
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};
+
+export const AlignStart = Template.bind({});
+AlignStart.args = {
+    gap: '8',
+    align: 'start',
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};
+
+export const AlignEnd = Template.bind({});
+AlignEnd.args = {
+    gap: '8',
+    align: 'end',
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};
+
+export const AlignCenter = Template.bind({});
+AlignCenter.args = {
+    gap: '8',
+    align: 'center',
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};
+
+export const Wrap = Template.bind({});
+Wrap.args = {
+    gap: '8',
+    wrap: 'wrap',
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};
+
+export const Nowrap = Template.bind({});
+Nowrap.args = {
+    gap: '8',
+    wrap: 'nowrap',
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};
+
+export const Max = Template.bind({});
+Max.args = {
+    gap: '8',
+    max: true,
+    children: (
+        <>
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <div>fourth</div>
+        </>
+    ),
+};

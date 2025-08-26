@@ -86,3 +86,10 @@ SizeS.args = {
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
     size: 's',
 };
+
+export const Bold = Template.bind({});
+Bold.args = {
+    title: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    bold: true,
+};

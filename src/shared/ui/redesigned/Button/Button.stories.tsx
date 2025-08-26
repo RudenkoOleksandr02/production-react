@@ -62,3 +62,17 @@ WithAddonRight.args = {
     variant: 'outline',
     addonRight: <Icon Svg={SvgIcon} />,
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: 'Text',
+    variant: 'outline',
+    disabled: true,
+};
+
+export const FullWidth = Template.bind({});
+FullWidth.args = {
+    children: 'Text',
+    variant: 'outline',
+    fullWidth: true,
+};
