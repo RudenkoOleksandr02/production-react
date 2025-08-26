@@ -1,13 +1,14 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
-import { Card, CardTheme } from '../Card/Card';
-import { Text } from '../Text/Text';
 
 import { Drawer } from './Drawer';
+import { Card } from '../Card';
+import { Text } from '../Text';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 
 export default {
-    title: 'shared/deprecated/Drawer',
+    title: 'shared/Drawer',
     component: Drawer,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -18,11 +19,12 @@ export default {
                 <Story />
             </AnimationProvider>
         ),
+        ThemeDecorator({ isRedesigned: true }),
     ],
 } as ComponentMeta<typeof Drawer>;
 
 const children = (
-    <Card theme={CardTheme.OUTLINED} style={{ width: '100%' }}>
+    <Card variant="outlined" style={{ width: '100%' }}>
         <Text title="title 1" text="text 1" />
         <Text title="title 2" text="text 2" />
         <Text title="title 3" text="text 3" />
