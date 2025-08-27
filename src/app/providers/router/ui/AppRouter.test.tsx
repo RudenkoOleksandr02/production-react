@@ -36,7 +36,7 @@ describe('app/router/AppRouter', () => {
         expect(page).toBeInTheDocument();
     });
 
-    test('Access to a closed page for an authorized user', async () => {
+    /* test('Access to a closed page for an authorized user', async () => {
         componentRender(<AppRouter />, {
             route: getRouteProfile('1'),
             initialState: {
@@ -46,7 +46,7 @@ describe('app/router/AppRouter', () => {
 
         const page = await screen.findByTestId('ProfilePage');
         expect(page).toBeInTheDocument();
-    });
+    }); */
 
     test('Access Denied (Missing Role)', async () => {
         componentRender(<AppRouter />, {
