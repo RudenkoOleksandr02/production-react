@@ -50,7 +50,7 @@
       "id": "1",
       "title": "JavaScript: Новые возможности ES2022",
       "subtitle": "Топ-10 фич JavaScript за 2022 год",
-      "img": "https://cdn-icons-png.flati",
+      "img": "https://arielfuggini.com/static/29a9f86a9bd7efd96ee9ce8b13124303/a41d1/javascript.jpg",
       "views": 2540,
       "createdAt": "15.03.2022",
       "userId": "1",
@@ -608,7 +608,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isArticlesPageHasBeenOpen": true
       },
       "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
