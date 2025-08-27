@@ -592,6 +592,12 @@
       "userId": "1",
       "text": "234",
       "id": "FB3UvLo"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "w wqeqeqw eqeQ112WWQDwe ",
+      "id": "gXRyv8J"
     }
   ],
   "users": [
@@ -608,7 +614,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isArticlesPageHasBeenOpen": true
       },
       "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
@@ -756,6 +762,13 @@
       "articleId": "13",
       "rate": 4,
       "id": "h4xLAf6"
+    },
+    {
+      "userId": "1",
+      "articleId": "11",
+      "rate": 4,
+      "feedback": "",
+      "id": "SMgI8dA"
     }
   ],
   "profile-ratings": [

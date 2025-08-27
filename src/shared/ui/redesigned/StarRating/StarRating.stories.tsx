@@ -2,13 +2,15 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { StarRating } from './StarRating';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 
 export default {
-    title: 'shared/deprecated/StarRating',
+    title: 'shared/StarRating',
     component: StarRating,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [ThemeDecorator({ isRedesigned: true })],
 } as ComponentMeta<typeof StarRating>;
 
 const Template: ComponentStory<typeof StarRating> = (args) => (

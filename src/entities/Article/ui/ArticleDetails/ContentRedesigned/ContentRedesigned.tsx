@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { HStack } from '@/shared/ui/redesigned/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { renderBlock } from '../renderBlock';
@@ -22,15 +22,13 @@ export const ContentRedesigned = memo((props: ContentRedesignedProps) => {
 
     if (isLoading) {
         content = (
-            <>
-                <HStack max justify="center">
-                    <Skeleton width={200} height={200} borderRadius="50%" />
-                </HStack>
+            <VStack max gap="16">
                 <Skeleton width={300} height={32} />
                 <Skeleton width={600} height={24} />
+                <Skeleton width="100%" height={420} borderRadius="16px" />
                 <Skeleton width="100%" height={200} />
                 <Skeleton width="100%" height={200} />
-            </>
+            </VStack>
         );
     } else if (error) {
         content = (

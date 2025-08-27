@@ -7,7 +7,9 @@ import {
     useRateArticle,
 } from '../../api/articleRatingApi';
 import { getUserAuthData } from '@/entities/User';
-import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 export interface ArticleRatingProps {
     className?: string;
@@ -56,7 +58,13 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
     );
 
     if (isLoading) {
-        return <Skeleton height={120} width="100%" />;
+        return (
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                on={<Skeleton height={120} width="100%" />}
+                off={<SkeletonDeprecated height={140} width="100%" />}
+            />
+        );
     }
 
     const rating = data?.[0];
