@@ -52,10 +52,15 @@
     "Rating articles coming soon!": "Rating articles coming soon!",
     "Welcome to the articles page": "Welcome to the articles page",
     "Here you can search and view articles on various topics": "Here you can search and view articles on various topics",
-  "Link to avatar": "Link to avatar",
-  "User settings": "User settings",
-  "New": "New",
+    "Link to avatar": "Link to avatar",
+    "User settings": "User settings",
+    "New": "New",
     "Old": "Old",
     "Interface option": "Interface option",
-  "Settings": "Settings"
+    "Settings": "Settings",
+    "Edit": "Edit",
+    "{{count}} views_zero": "{{count}} просмотров",
+    "{{count}} views_one": "{{count}} просмотр",
+    "{{count}} views_few": "{{count}} просмотра",
+    "{{count}} views_many": "{{count}} просмотров"
 }
