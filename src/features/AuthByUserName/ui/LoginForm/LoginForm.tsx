@@ -14,6 +14,7 @@ import { loginActions, loginReducer } from '../../model/slice/loginSlice';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { LoginFormDeprecated } from '../LoginFormDeprecated/LoginFormDeprecated';
 import { LoginFormRedesigned } from '../LoginFormRedesigned/LoginFormRedesigned';
+import { useForceUpdate } from '@/shared/lib/render/forceUpdate';
 
 interface LoginFormProps {
     className?: string;
@@ -41,6 +42,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     const password = useSelector(getLoginPassword);
     const isLoading = useSelector(getLoginIsLoading);
     const error = useSelector(getLoginError);
+    const forceUpdate = useForceUpdate();
 
     const onChangeUsername = useCallback(
         (value: string) => {
@@ -60,8 +62,9 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         const result = await dispatch(loginByUsername({ username, password }));
         if (result.meta.requestStatus === 'fulfilled') {
             onSuccess();
+            forceUpdate();
         }
-    }, [dispatch, password, username, onSuccess]);
+    }, [dispatch, username, password, onSuccess, forceUpdate]);
 
     const commonProps: LoginFormCommonProps = {
         className,
