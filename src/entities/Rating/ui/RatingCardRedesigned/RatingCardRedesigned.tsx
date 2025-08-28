@@ -44,7 +44,7 @@ export const RatingCardRedesigned = memo((props: RatingCardCommonProps) => {
             max
             data-testid="RatingCard"
             padding="24"
-            border="round"
+            border="partial"
         >
             <VStack align="center" gap="8" max>
                 <Text title={starsCount ? t('Thanks for the rate') : title} />

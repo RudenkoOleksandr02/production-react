@@ -39,6 +39,12 @@ Round.args = {
     border: 'round',
 };
 
+export const Partial = Template.bind({});
+Partial.args = {
+    children: <Text title="text" text="text text" />,
+    border: 'partial',
+};
+
 export const Padding0 = Template.bind({});
 Padding0.args = {
     children: <Text title="text" text="text text" />,

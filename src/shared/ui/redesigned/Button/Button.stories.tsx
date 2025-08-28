@@ -23,16 +23,44 @@ Clear.args = {
     variant: 'clear',
 };
 
-export const Outline = Template.bind({});
-Outline.args = {
+export const OutlineNormal = Template.bind({});
+OutlineNormal.args = {
     children: 'Text',
     variant: 'outline',
 };
 
-export const Filled = Template.bind({});
-Filled.args = {
+export const OutlineSuccess = Template.bind({});
+OutlineSuccess.args = {
+    children: 'Text',
+    variant: 'outline',
+    color: 'success',
+};
+
+export const OutlineError = Template.bind({});
+OutlineError.args = {
+    children: 'Text',
+    variant: 'outline',
+    color: 'error',
+};
+
+export const FilledNormal = Template.bind({});
+FilledNormal.args = {
     children: 'Text',
     variant: 'filled',
+};
+
+export const FilledSuccess = Template.bind({});
+FilledSuccess.args = {
+    children: 'Text',
+    variant: 'filled',
+    color: 'success',
+};
+
+export const FilledError = Template.bind({});
+FilledError.args = {
+    children: 'Text',
+    variant: 'filled',
+    color: 'error',
 };
 
 export const OutlineL = Template.bind({});
