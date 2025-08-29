@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from '../../../Button/Button';
 import { Dropdown } from './Dropdown';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'shared/Popups/Dropdown',
@@ -17,7 +17,7 @@ export default {
                 <Story />
             </div>
         ),
-        ThemeDecorator({ isRedesigned: true }),
+        NewDesignDecorator,
     ],
 } as ComponentMeta<typeof Dropdown>;
 

@@ -5,7 +5,7 @@ import { Card, CardTheme } from '../../../../deprecated/Card/Card';
 import { Text } from '../../../Text/Text';
 import { Button } from '../../../Button/Button';
 import { Popover } from './Popover';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'shared/Popups/Popover',
@@ -19,7 +19,7 @@ export default {
                 <Story />
             </div>
         ),
-        ThemeDecorator({ isRedesigned: true }),
+        NewDesignDecorator,
     ],
 } as ComponentMeta<typeof Popover>;
 

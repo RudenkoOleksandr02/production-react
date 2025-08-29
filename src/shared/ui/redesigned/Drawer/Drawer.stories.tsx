@@ -5,7 +5,7 @@ import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
 import { Drawer } from './Drawer';
 import { Card } from '../Card';
 import { Text } from '../Text';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'shared/Drawer',
@@ -19,7 +19,7 @@ export default {
                 <Story />
             </AnimationProvider>
         ),
-        ThemeDecorator({ isRedesigned: true }),
+        NewDesignDecorator,
     ],
 } as ComponentMeta<typeof Drawer>;
 

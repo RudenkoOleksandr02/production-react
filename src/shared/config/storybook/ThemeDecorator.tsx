@@ -5,19 +5,14 @@ import { ThemeProvider } from '@/app/providers/ThemeProvider';
 
 interface ThemeDecoratorProps {
     theme?: Theme;
-    isRedesigned?: boolean;
 }
 
 export const ThemeDecorator =
-    ({ theme, isRedesigned }: ThemeDecoratorProps) =>
+    ({ theme }: ThemeDecoratorProps) =>
     (StoryComponent: Story) =>
         (
             <ThemeProvider initialTheme={theme ?? Theme.LIGHT}>
-                <div
-                    className={`${
-                        isRedesigned ? 'app_redesigned' : 'app'
-                    } ${theme}`}
-                >
+                <div className={`app ${theme}`}>
                     <StoryComponent />
                 </div>
             </ThemeProvider>

@@ -4,7 +4,7 @@ import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorat
 import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator';
 import { Theme } from '../../src/shared/const/theme';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
-import { setFeatureFlags } from '@/shared/lib/features';
+import { FeaturesFlagsDecorator } from '../../src/shared/config/storybook/FeaturesFlagsDecorator';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -31,8 +31,5 @@ export const decorators = [
     RouterDecorator,
     StoreDecorator({}),
     SuspenseDecorator,
-    (Story) => {
-        setFeatureFlags({ isAppRedesigned: true });
-        return <Story />;
-    },
+    FeaturesFlagsDecorator({}),
 ];

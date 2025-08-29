@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ListBox } from './ListBox';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'shared/Popups/ListBox',
@@ -16,7 +16,7 @@ export default {
                 <Story />
             </div>
         ),
-        ThemeDecorator({ isRedesigned: true }),
+        NewDesignDecorator,
     ],
 } as ComponentMeta<typeof ListBox>;
 

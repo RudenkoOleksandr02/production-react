@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { CommentCard } from './CommentCard';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'entities/Comment/CommentCard',
@@ -15,14 +16,20 @@ const Template: ComponentStory<typeof CommentCard> = (args) => (
     <CommentCard {...args} />
 );
 
-export const Primary = Template.bind({});
-Primary.args = {
+const normalArgs = {
     comment: {
         id: '1',
         text: 'hello world 1',
         user: { id: '1', username: 'Sasha' },
     },
 };
+
+export const Primary = Template.bind({});
+Primary.args = normalArgs;
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = normalArgs;
+PrimaryRedesigned.decorators = [NewDesignDecorator];
 
 export const Loading = Template.bind({});
 Loading.args = {
