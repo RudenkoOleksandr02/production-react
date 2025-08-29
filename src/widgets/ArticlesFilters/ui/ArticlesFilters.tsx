@@ -36,7 +36,7 @@ export const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
         search,
         onChangeSearch,
     } = props;
-    const { t } = useTranslation();
+    const { t } = useTranslation('articles');
 
     return (
         <Card

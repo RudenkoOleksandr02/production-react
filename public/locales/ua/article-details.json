@@ -5,6 +5,14 @@
     "Back to list": "Повернутися до списку",
     "Recommendations": "Рекомендації",
     "Edit": "Редагувати",
-    "Create article": "Створити статтю",
-    "Edit article with ID = ": "Редагувати статтю з ID ="
+    "Rating articles coming soon!": "Статті з рейтингами будуть доступні найближчим часом!",
+    "{{count}} views_zero": "{{count}} переглядів",
+    "{{count}} views_one": "{{count}} перегляд",
+    "{{count}} views_few": "{{count}} перегляду",
+    "{{count}} views_many": "{{count}} переглядів",
+    "Enter comment text": "Введіть текст коментаря",
+    "Send": "Надіслати",
+    "Comments not found": "Коментарі не знайдено",
+    "Rate the article": "Оцініть статтю",
+    "Leave your feedback about the article, it will help us improve": "Залиште свій відгук про статтю, це допоможе нам покращити її"
 }

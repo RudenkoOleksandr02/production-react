@@ -1,0 +1,17 @@
+{
+  "Error loading articles": "Ошибка загрузки статей",
+  "Search": "Поиск",
+  "Welcome to the articles page": "Добро пожаловать на страницу статей",
+  "Here you can search and view articles on various topics": "Здесь вы можете искать и просматривать статьи на различные темы",
+  "All": "Все",
+  "IT": "IT",
+  "Science": "Наука",
+  "Economics": "Экономика",
+  "increasing": "увеличение",
+  "descending": "уменьшение",
+  "creation date": "дата создания",
+  "title": "заголовок",
+  "views": "просмотры",
+  "Sort by": "Сортировать по",
+  "By": "По"
+}

@@ -16,7 +16,7 @@ interface ArticlesPageFilterProps {
 
 export const ArticlesPageFilter = memo((props: ArticlesPageFilterProps) => {
     const { className } = props;
-    const { t } = useTranslation();
+    const { t } = useTranslation('articles');
 
     const {
         onChangeSearch,

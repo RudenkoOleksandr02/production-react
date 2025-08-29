@@ -7,7 +7,9 @@ import {
     useGetProfileRating,
     useRateProfile,
 } from '../../api/profileRaitingApi';
-import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 export interface ProfileRatingProps {
     className?: string;
@@ -16,7 +18,7 @@ export interface ProfileRatingProps {
 
 const ProfileRating = memo((props: ProfileRatingProps) => {
     const { className, profileId } = props;
-    const { t } = useTranslation();
+    const { t } = useTranslation('profile');
     const authData = useSelector(getUserAuthData);
     const { data, isLoading } = useGetProfileRating({
         userId: authData?.id ?? '',
@@ -59,7 +61,13 @@ const ProfileRating = memo((props: ProfileRatingProps) => {
     }
 
     if (isLoading) {
-        return <Skeleton height={120} width="100%" />;
+        return (
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                on={<Skeleton height={120} width="100%" />}
+                off={<SkeletonDeprecated height={120} width="100%" />}
+            />
+        );
     }
 
     const rating = data?.[0];

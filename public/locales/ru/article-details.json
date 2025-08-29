@@ -5,6 +5,14 @@
     "Back to list": "Вернуться к списку",
     "Recommendations": "Рекомендации",
     "Edit": "Редактировать",
-    "Create article": "Создать статью",
-    "Edit article with ID = ": "Редактировать статью с ID ="
+    "Rating articles coming soon!": "Рейтинг статей появится скоро!",
+    "{{count}} views_zero": "{{count}} просмотров",
+    "{{count}} views_one": "{{count}} просмотр",
+    "{{count}} views_few": "{{count}} просмотра",
+    "{{count}} views_many": "{{count}} просмотров",
+    "Enter comment text": "Введите текст комментария",
+    "Send": "Отправить",
+    "Comments not found": "Комментарии не найдены",
+    "Rate the article": "Оцените статью",
+    "Leave your feedback about the article, it will help us improve": "Оставьте свой отзыв о статье, это поможет нам стать лучше"
 }

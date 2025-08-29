@@ -1,5 +1,4 @@
 {
-    "Profile page": "Сторінка профілю",
     "Profile": "Профіль",
     "Edit": "Редагувати",
     "First name": "ім'я",
@@ -21,5 +20,8 @@
     "Incorrect username": "Невірне ім'я користувача",
     "Data not provided": "Дані не надано",
     "Server error while saving": "Помилка сервера під час збереження",
-    "Profile not found": "Profile not found"
+    "Profile not found": "Профіль не знайдено",
+    "Link to avatar": "Посилання на аватар",
+  "Rate the profile": "Оцініть профіль",
+    "Leave your feedback about the profile": "Залиште свій відгук про профіль"
 }

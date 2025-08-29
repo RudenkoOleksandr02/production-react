@@ -2,13 +2,15 @@ import { useTranslation } from 'react-i18next';
 import { memo, useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Modal } from '@/shared/ui/redesigned/Modal';
-import { Text } from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 import { saveJsonSettings, useJsonSettings } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Drawer } from '@/shared/ui/redesigned/Drawer';
+import { ToggleFeatures } from '@/shared/lib/features';
 
 export const ArticlePageGreeting = memo(() => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('articles');
     const [isOpen, setIsOpen] = useState(false);
     const { isArticlesPageHasBeenOpen } = useJsonSettings();
     const dispatch = useAppDispatch();
@@ -23,9 +25,24 @@ export const ArticlePageGreeting = memo(() => {
     const onClose = () => setIsOpen(false);
 
     const text = (
-        <Text
-            title={t('Welcome to the articles page')}
-            text={t('Here you can search and view articles on various topics')}
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+                <Text
+                    title={t('Welcome to the articles page')}
+                    text={t(
+                        'Here you can search and view articles on various topics',
+                    )}
+                />
+            }
+            off={
+                <TextDeprecated
+                    title={t('Welcome to the articles page')}
+                    text={t(
+                        'Here you can search and view articles on various topics',
+                    )}
+                />
+            }
         />
     );
 

@@ -5,6 +5,12 @@
     "Back to list": "Back to list",
     "Recommendations": "Recommendations",
     "Edit": "Edit",
-    "Create article": "Create article",
-    "Edit article with ID = ": "Edit article with ID = "
+    "Rating articles coming soon!": "Rating articles coming soon!",
+    "{{count}} views_one": "{{count}} view",
+    "{{count}} views_other": "{{count}} views",
+    "Enter comment text": "Enter comment text",
+    "Send": "Send",
+    "Comments not found": "Comments not found",
+    "Rate the article": "Rate the article",
+    "Leave your feedback about the article, it will help us improve": "Leave your feedback about the article, it will help us improve"
 }

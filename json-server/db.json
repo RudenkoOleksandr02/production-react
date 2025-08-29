@@ -614,7 +614,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_light_theme",
+        "theme": "app_dark_theme",
         "isArticlesPageHasBeenOpen": true
       },
       "avatar": "https://img.freepik.com/free-veclustration-user-avatar-icon_53876-5907.jpg?semt=ais_hybrid&w=740"
@@ -632,7 +632,7 @@
         "isAppRedesigned": true
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isVisitFirst": true,
         "settingsPageHasBeenOpen": false,
         "isArticlesPageHasBeenOpen": true
@@ -770,6 +770,12 @@
       "rate": 4,
       "feedback": "",
       "id": "SMgI8dA"
+    },
+    {
+      "userId": "2",
+      "articleId": "11",
+      "rate": 4,
+      "id": "8FYoYgf"
     }
   ],
   "profile-ratings": [
