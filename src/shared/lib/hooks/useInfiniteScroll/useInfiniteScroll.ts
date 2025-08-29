@@ -16,8 +16,6 @@ export function useInfiniteScroll({
         const wrapperElement = wrapperRef?.current || null;
         const triggerElement = triggerRef.current;
 
-        console.dir(wrapperElement);
-
         if (callback) {
             const options = {
                 root: wrapperElement,
