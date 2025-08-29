@@ -5,7 +5,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { Notification } from '@/entities/Notification';
 import { Navbar } from './Navbar';
 import img from './storybook.png';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'widgets/Navbar',
@@ -19,7 +19,7 @@ export default {
                 <Story />
             </div>
         ),
-        ThemeDecorator({ isRedesigned: true }),
+        NewDesignDecorator,
     ],
 } as ComponentMeta<typeof Navbar>;
 

@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ArticlesFilters } from './ArticlesFilters';
 import { ArticleSortField, ArticleType } from '@/entities/Article';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'widgets/ArticlesFilters',
@@ -12,7 +12,7 @@ export default {
         backgroundColor: { control: 'color' },
     },
 
-    decorators: [ThemeDecorator({ isRedesigned: true })],
+    decorators: [NewDesignDecorator],
 } as ComponentMeta<typeof ArticlesFilters>;
 
 const Template: ComponentStory<typeof ArticlesFilters> = (args) => (

@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { MainLayout } from './MainLayout';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'shared/layouts/MainLayout',
@@ -10,7 +10,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [ThemeDecorator({ isRedesigned: true })],
+    decorators: [NewDesignDecorator],
 } as ComponentMeta<typeof MainLayout>;
 
 const Template: ComponentStory<typeof MainLayout> = (args) => (

@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ArticleAdditionalInfo } from './ArticleAdditionalInfo';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'widgets/ArticleAdditionalInfo',
@@ -10,7 +10,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [ThemeDecorator({ isRedesigned: true })],
+    decorators: [NewDesignDecorator],
 } as ComponentMeta<typeof ArticleAdditionalInfo>;
 
 const Template: ComponentStory<typeof ArticleAdditionalInfo> = (args) => (

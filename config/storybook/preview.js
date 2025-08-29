@@ -3,7 +3,6 @@ import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator
 import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator';
 import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator';
 import { Theme } from '../../src/shared/const/theme';
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { FeaturesFlagsDecorator } from '../../src/shared/config/storybook/FeaturesFlagsDecorator';
 
 export const parameters = {
@@ -29,7 +28,6 @@ export const decorators = [
     StyleDecorator,
     ThemeDecorator({ theme: Theme.LIGHT }),
     RouterDecorator,
-    StoreDecorator({}),
     SuspenseDecorator,
     FeaturesFlagsDecorator({}),
 ];

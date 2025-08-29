@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { LangSwitcher } from './LangSwitcher';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'features/LangSwitcher',
@@ -10,7 +10,7 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [ThemeDecorator({ isRedesigned: true })],
+    decorators: [NewDesignDecorator],
 } as ComponentMeta<typeof LangSwitcher>;
 
 const Template: ComponentStory<typeof LangSwitcher> = (args) => (
