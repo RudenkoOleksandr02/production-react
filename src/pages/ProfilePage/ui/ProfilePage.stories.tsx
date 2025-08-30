@@ -1,13 +1,12 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import avatar from '@/shared/assets/tests/storybook.png';
 import ProfilePage from './ProfilePage';
-import { Theme } from '@/shared/const/theme';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'pages/ProfilePage',
@@ -53,16 +52,11 @@ const parameters = {
     ],
 };
 
-export const Light = Template.bind({});
-Light.args = {};
-Light.parameters = parameters;
+export const Primary = Template.bind({});
+Primary.args = {};
+Primary.parameters = parameters;
 
-export const Dark = Template.bind({});
-Dark.args = {};
-Dark.decorators = [ThemeDecorator({ theme: Theme.DARK })];
-Dark.parameters = parameters;
-
-export const Orange = Template.bind({});
-Orange.args = {};
-Orange.decorators = [ThemeDecorator({ theme: Theme.ORANGE })];
-Orange.parameters = parameters;
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {};
+PrimaryRedesigned.decorators = [NewDesignDecorator];
+PrimaryRedesigned.parameters = parameters;

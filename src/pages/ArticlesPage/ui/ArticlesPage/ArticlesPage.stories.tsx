@@ -10,6 +10,7 @@ import {
     ArticleView,
 } from '@/entities/Article';
 import ArticlesPage from './ArticlesPage';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'pages/ArticlesPage',
@@ -129,6 +130,30 @@ Small.decorators = [
     }),
 ];
 
+export const SmallRedesigned = Template.bind({});
+SmallRedesigned.args = {};
+SmallRedesigned.decorators = [
+    StoreDecorator({
+        articlesPage: {
+            view: ArticleView.SMALL,
+            entities: {
+                1: articles[0],
+                2: articles[1],
+            },
+            ids: ['1', '2'],
+            page: 1,
+            hasMore: false,
+            _inited: true,
+            limit: 9,
+            sort: ArticleSortField.CREATED,
+            search: '',
+            order: 'asc',
+            type: ArticleType.ALL,
+        },
+    }),
+    NewDesignDecorator,
+];
+
 export const Big = Template.bind({});
 Big.args = {};
 Big.decorators = [
@@ -142,4 +167,20 @@ Big.decorators = [
             ids: ['1', '2'],
         },
     }),
+];
+
+export const BigRedesigned = Template.bind({});
+BigRedesigned.args = {};
+BigRedesigned.decorators = [
+    StoreDecorator({
+        articlesPage: {
+            view: ArticleView.BIG,
+            entities: {
+                1: articles[0],
+                2: articles[1],
+            },
+            ids: ['1', '2'],
+        },
+    }),
+    NewDesignDecorator,
 ];

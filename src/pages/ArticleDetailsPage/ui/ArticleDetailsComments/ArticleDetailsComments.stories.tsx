@@ -2,9 +2,8 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { ArticleDetailsComments } from './ArticleDetailsComments';
-import { Theme } from '@/shared/const/theme';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'pages/ArticleDetailsPage/ArticleDetailsComments',
@@ -42,10 +41,6 @@ const Template: ComponentStory<typeof ArticleDetailsComments> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {};
 
-export const Dark = Template.bind({});
-Dark.args = {};
-Dark.decorators = [ThemeDecorator({ theme: Theme.DARK })];
-
-export const Orange = Template.bind({});
-Orange.args = {};
-Orange.decorators = [ThemeDecorator({ theme: Theme.ORANGE })];
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {};
+PrimaryRedesigned.decorators = [NewDesignDecorator];

@@ -4,6 +4,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ArticleView } from '../../model/consts/consts';
 import { Article } from '../../model/types/article';
 import { ArticleListItem } from './ArticleListItem';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'entities/Article/ArticleListItem',
@@ -19,7 +20,7 @@ const Template: ComponentStory<typeof ArticleListItem> = (args) => (
 
 const article = {
     id: '1',
-    title: 'Javascript news Javascript news Javascript news Javascript news',
+    title: 'Javascript news',
     subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
@@ -98,8 +99,22 @@ Big.args = {
     view: ArticleView.BIG,
 };
 
+export const BigRedesigned = Template.bind({});
+BigRedesigned.args = {
+    article,
+    view: ArticleView.BIG,
+};
+BigRedesigned.decorators = [NewDesignDecorator];
+
 export const Small = Template.bind({});
 Small.args = {
     article,
     view: ArticleView.SMALL,
 };
+
+export const SmallRedesigned = Template.bind({});
+SmallRedesigned.args = {
+    article,
+    view: ArticleView.SMALL,
+};
+SmallRedesigned.decorators = [NewDesignDecorator];

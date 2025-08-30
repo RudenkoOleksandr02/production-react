@@ -42,8 +42,19 @@ export const withError = Template.bind({});
 withError.args = {
     error: 'true',
 };
+export const withErrorRedesigned = Template.bind({});
+withErrorRedesigned.args = {
+    error: 'true',
+};
+withErrorRedesigned.decorators = [NewDesignDecorator];
 
 export const isLoading = Template.bind({});
 isLoading.args = {
     isLoading: true,
 };
+
+export const isLoadingRedesigned = Template.bind({});
+isLoadingRedesigned.args = {
+    isLoading: true,
+};
+isLoadingRedesigned.decorators = [NewDesignDecorator];

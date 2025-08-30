@@ -13,14 +13,6 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [
-        (Story) => (
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Story />
-            </div>
-        ),
-        NewDesignDecorator,
-    ],
 } as ComponentMeta<typeof Navbar>;
 
 const list: Notification[] = [
@@ -43,18 +35,66 @@ const list: Notification[] = [
 
 const Template: ComponentStory<typeof Navbar> = () => <Navbar />;
 
-export const Light = Template.bind({});
-Light.args = {};
-Light.decorators = [StoreDecorator({})];
+export const Primary = Template.bind({});
+Primary.args = {};
+Primary.decorators = [
+    StoreDecorator({}),
+    (Story) => (
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Story />
+        </div>
+    ),
+];
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {};
+PrimaryRedesigned.decorators = [
+    (Story) => (
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Story />
+        </div>
+    ),
+    StoreDecorator({}),
+    NewDesignDecorator,
+];
 
 export const AuthNavbar = Template.bind({});
 AuthNavbar.args = {};
 AuthNavbar.decorators = [
+    (Story) => (
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Story />
+        </div>
+    ),
     StoreDecorator({
         user: { authData: { avatar: img } },
     }),
 ];
 AuthNavbar.parameters = {
+    mockData: [
+        {
+            url: `${__API__}/notifications`,
+            method: 'GET',
+            status: 200,
+            response: list,
+        },
+    ],
+};
+
+export const AuthNavbarRedesigned = Template.bind({});
+AuthNavbarRedesigned.args = {};
+AuthNavbarRedesigned.decorators = [
+    (Story) => (
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Story />
+        </div>
+    ),
+    StoreDecorator({
+        user: { authData: { avatar: img } },
+    }),
+    NewDesignDecorator,
+];
+AuthNavbarRedesigned.parameters = {
     mockData: [
         {
             url: `${__API__}/notifications`,

@@ -4,6 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { Article } from '@/entities/Article';
 import { ArticleRecommendationsList } from './ArticleRecommendationsList';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'features/ArticleRecommendationsList',
@@ -20,7 +21,7 @@ const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => (
 
 const article: Article = {
     id: '1',
-    title: 'Javascript news Javascript news Javascript news Javascript news',
+    title: 'Javascript news',
     subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
@@ -33,9 +34,7 @@ const article: Article = {
     blocks: [],
 };
 
-export const Normal = Template.bind({});
-Normal.args = {};
-Normal.parameters = {
+const normalParameters = {
     mockData: [
         {
             url: `${__API__}/articles?_limit=3&_expand=user`,
@@ -49,3 +48,10 @@ Normal.parameters = {
         },
     ],
 };
+
+export const Normal = Template.bind({});
+Normal.parameters = normalParameters;
+
+export const NormalRedesigned = Template.bind({});
+NormalRedesigned.parameters = normalParameters;
+NormalRedesigned.decorators = [NewDesignDecorator];

@@ -1,7 +1,7 @@
 .SidebarRedesigned {
     background: var(--light-bg-redesigned);
     width: 220px;
-    height: 100%;
+    height: calc(100vh - 64px);
     border-radius: 32px;
     position: relative;
 }

@@ -1,10 +1,9 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { NotFoundPage } from './NotFoundPage';
-import { Theme } from '@/shared/const/theme';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'pages/NotFoundPage',
@@ -15,23 +14,16 @@ export default {
     args: {
         to: '/',
     },
+    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof NotFoundPage>;
 
 const Template: ComponentStory<typeof NotFoundPage> = (args) => (
     <NotFoundPage {...args} />
 );
 
-export const Light = Template.bind({});
-Light.args = {};
-Light.decorators = [StoreDecorator({})];
+export const Primary = Template.bind({});
+Primary.args = {};
 
-export const Dark = Template.bind({});
-Dark.args = {};
-Dark.decorators = [ThemeDecorator({ theme: Theme.DARK }), StoreDecorator({})];
-
-export const Orange = Template.bind({});
-Orange.args = {};
-Orange.decorators = [
-    ThemeDecorator({ theme: Theme.ORANGE }),
-    StoreDecorator({}),
-];
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {};
+PrimaryRedesigned.decorators = [NewDesignDecorator];

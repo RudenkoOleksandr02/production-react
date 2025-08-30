@@ -10,7 +10,6 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [NewDesignDecorator],
 } as ComponentMeta<typeof LangSwitcher>;
 
 const Template: ComponentStory<typeof LangSwitcher> = (args) => (
@@ -19,3 +18,7 @@ const Template: ComponentStory<typeof LangSwitcher> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {};
+PrimaryRedesigned.decorators = [NewDesignDecorator];

@@ -1,7 +1,9 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ArticleSortSelector } from './ArticleSortSelector';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
+import { ArticleSortField } from '@/entities/Article';
 
 export default {
     title: 'features/ArticleSortSelector',
@@ -17,3 +19,10 @@ const Template: ComponentStory<typeof ArticleSortSelector> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {
+    sort: ArticleSortField.TITLE,
+    order: 'asc',
+};
+PrimaryRedesigned.decorators = [NewDesignDecorator];

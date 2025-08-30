@@ -4,6 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { Notification } from '../../model/types/notification';
 import { NotificationList } from './NotificationList';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'entities/Notification/NotificationList',
@@ -36,9 +37,7 @@ const Template: ComponentStory<typeof NotificationList> = (args) => (
     <NotificationList {...args} />
 );
 
-export const Primary = Template.bind({});
-Primary.args = {};
-Primary.parameters = {
+const primaryParameters = {
     mockData: [
         {
             url: `${__API__}/notifications`,
@@ -48,3 +47,10 @@ Primary.parameters = {
         },
     ],
 };
+
+export const Primary = Template.bind({});
+Primary.parameters = primaryParameters;
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.parameters = primaryParameters;
+PrimaryRedesigned.decorators = [NewDesignDecorator];

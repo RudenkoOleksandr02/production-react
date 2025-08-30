@@ -5,18 +5,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 import { ArticleType, Article, ArticleBlockType } from '@/entities/Article';
 import ArticleDetailsPage from './ArticleDetailsPage';
 import { setFeatureFlags } from '@/shared/lib/features';
-
-export default {
-    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
-    component: ArticleDetailsPage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof ArticleDetailsPage>;
-
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
-    <ArticleDetailsPage {...args} />
-);
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 const article: Article = {
     id: '1',
@@ -58,6 +47,29 @@ const article: Article = {
     ],
 };
 
+export default {
+    title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
+    component: ArticleDetailsPage,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+    decorators: [
+        (Story) => {
+            setFeatureFlags({ isArticleRatingEnabled: true });
+            return <Story />;
+        },
+        StoreDecorator({
+            articleDetails: {
+                data: article,
+            },
+        }),
+    ],
+} as ComponentMeta<typeof ArticleDetailsPage>;
+
+const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
+    <ArticleDetailsPage {...args} />
+);
+
 const parameters = {
     mockData: [
         {
@@ -84,16 +96,9 @@ const parameters = {
 };
 
 export const Primary = Template.bind({});
-Primary.args = {};
-Primary.decorators = [
-    (Story) => {
-        setFeatureFlags({ isArticleRatingEnabled: true });
-        return <Story />;
-    },
-    StoreDecorator({
-        articleDetails: {
-            data: article,
-        },
-    }),
-];
+Primary.decorators = [];
 Primary.parameters = parameters;
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.decorators = [NewDesignDecorator];
+PrimaryRedesigned.parameters = parameters;

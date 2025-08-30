@@ -51,3 +51,17 @@ WithAddonRight.args = {
     placeholder: 'some placeholder',
     addonRight: <Icon Svg={SvgIcon} />,
 };
+
+export const Readonly = Template.bind({});
+Readonly.args = {
+    value: 'value',
+    placeholder: 'some placeholder',
+    readonly: true,
+};
+
+export const WithLabel = Template.bind({});
+WithLabel.args = {
+    value: 'value',
+    placeholder: 'some placeholder',
+    label: 'label',
+};

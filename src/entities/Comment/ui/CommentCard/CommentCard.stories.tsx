@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof CommentCard> = (args) => (
     <CommentCard {...args} />
 );
 
-const normalArgs = {
+const primaryArgs = {
     comment: {
         id: '1',
         text: 'hello world 1',
@@ -25,14 +25,13 @@ const normalArgs = {
 };
 
 export const Primary = Template.bind({});
-Primary.args = normalArgs;
+Primary.args = primaryArgs;
 
 export const PrimaryRedesigned = Template.bind({});
-PrimaryRedesigned.args = normalArgs;
+PrimaryRedesigned.args = primaryArgs;
 PrimaryRedesigned.decorators = [NewDesignDecorator];
 
-export const Loading = Template.bind({});
-Loading.args = {
+const loadingArgs = {
     comment: {
         id: '1',
         text: 'hello world 1',
@@ -40,3 +39,10 @@ Loading.args = {
     },
     isLoading: true,
 };
+
+export const Loading = Template.bind({});
+Loading.args = loadingArgs;
+
+export const LoadingRedesigned = Template.bind({});
+LoadingRedesigned.args = loadingArgs;
+LoadingRedesigned.decorators = [NewDesignDecorator];

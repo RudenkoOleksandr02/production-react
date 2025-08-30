@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import ForbiddenPage from './ForbiddenPage';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'pages/ForbiddenPage',
@@ -19,3 +20,7 @@ const Template: ComponentStory<typeof ForbiddenPage> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {};
+PrimaryRedesigned.decorators = [NewDesignDecorator];

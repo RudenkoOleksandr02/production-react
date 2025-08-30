@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeSwitcher } from './ThemeSwitcher';
 import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
 
 export default {
     title: 'features/ThemeSwitcher',
@@ -13,7 +14,7 @@ export default {
     args: {
         to: '/',
     },
-    decorators: [NewDesignDecorator],
+    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ThemeSwitcher>;
 
 const Template: ComponentStory<typeof ThemeSwitcher> = (args) => (
@@ -22,3 +23,7 @@ const Template: ComponentStory<typeof ThemeSwitcher> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {};
+PrimaryRedesigned.decorators = [NewDesignDecorator];

@@ -4,6 +4,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ArticleView } from '../../model/consts/consts';
 import { Article } from '../../model/types/article';
 import { ArticleList } from './ArticleList';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'entities/Article/ArticleList',
@@ -19,7 +20,7 @@ const Template: ComponentStory<typeof ArticleList> = (args) => (
 
 const article = {
     id: '1',
-    title: 'Javascript news Javascript news Javascript news Javascript news',
+    title: 'Javascript news',
     subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
@@ -92,22 +93,33 @@ const article = {
     ],
 } as Article;
 
-export const LoadingBig = Template.bind({});
-LoadingBig.args = {
+const loadingBigArgs = {
     view: ArticleView.BIG,
     articles: [],
     isLoading: true,
 };
 
-export const LoadingSmall = Template.bind({});
-LoadingSmall.args = {
+export const LoadingBig = Template.bind({});
+LoadingBig.args = loadingBigArgs;
+
+export const LoadingBigRedesigned = Template.bind({});
+LoadingBigRedesigned.args = loadingBigArgs;
+LoadingBigRedesigned.decorators = [NewDesignDecorator];
+
+const loadingSmallArgs = {
     view: ArticleView.SMALL,
     articles: [],
     isLoading: true,
 };
 
-export const ListBig = Template.bind({});
-ListBig.args = {
+export const LoadingSmall = Template.bind({});
+LoadingSmall.args = loadingSmallArgs;
+
+export const LoadingSmallRedesigned = Template.bind({});
+LoadingSmallRedesigned.args = loadingSmallArgs;
+LoadingSmallRedesigned.decorators = [NewDesignDecorator];
+
+const listBigArgs = {
     view: ArticleView.BIG,
     articles: new Array(3).fill(0).map((item, index) => ({
         ...article,
@@ -115,11 +127,24 @@ ListBig.args = {
     })),
 };
 
-export const ListSmall = Template.bind({});
-ListSmall.args = {
+export const ListBig = Template.bind({});
+ListBig.args = listBigArgs;
+
+export const ListBigRedesigned = Template.bind({});
+ListBigRedesigned.args = listBigArgs;
+ListBigRedesigned.decorators = [NewDesignDecorator];
+
+const listSmallArgs = {
     view: ArticleView.SMALL,
     articles: new Array(9).fill(0).map((item, index) => ({
         ...article,
         id: String(index),
     })),
 };
+
+export const ListSmall = Template.bind({});
+ListSmall.args = listSmallArgs;
+
+export const ListSmallRedesigned = Template.bind({});
+ListSmallRedesigned.args = listSmallArgs;
+ListSmallRedesigned.decorators = [NewDesignDecorator];

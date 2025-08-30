@@ -15,7 +15,6 @@ export type ButtonSize = 'm' | 'l' | 'xl';
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     variant?: ButtonVariant;
-    square?: boolean;
     size?: ButtonSize;
     children?: ReactNode;
     fullWidth?: boolean;
@@ -30,7 +29,6 @@ export const Button = forwardRef(
             className,
             children,
             variant = 'outline',
-            square,
             disabled,
             size = 'm',
             fullWidth,
@@ -43,7 +41,6 @@ export const Button = forwardRef(
         const additional: string[] = [cls[variant], cls[size], cls[color]];
 
         const mods: Mods = {
-            [cls.square]: square,
             [cls.disabled]: disabled,
             [cls.fullWidth]: fullWidth,
             [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),

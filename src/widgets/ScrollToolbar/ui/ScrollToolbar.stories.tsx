@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ScrollToolbar } from './ScrollToolbar';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'widgets/ScrollToolbar',
@@ -17,3 +18,4 @@ const Template: ComponentStory<typeof ScrollToolbar> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {};
+Primary.decorators = [NewDesignDecorator];

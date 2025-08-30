@@ -11,17 +11,25 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [NewDesignDecorator],
 } as ComponentMeta<typeof Sidebar>;
 
 const Template: ComponentStory<typeof Sidebar> = () => <Sidebar />;
 
-export const Light = Template.bind({});
-Light.args = {};
-Light.decorators = [
+export const Primary = Template.bind({});
+Primary.args = {};
+Primary.decorators = [
     StoreDecorator({
         user: { authData: {} },
     }),
+];
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {};
+PrimaryRedesigned.decorators = [
+    StoreDecorator({
+        user: { authData: {} },
+    }),
+    NewDesignDecorator,
 ];
 
 export const NotAuth = Template.bind({});
@@ -30,4 +38,13 @@ NotAuth.decorators = [
     StoreDecorator({
         user: {},
     }),
+];
+
+export const NotAuthRedesigned = Template.bind({});
+NotAuthRedesigned.args = {};
+NotAuthRedesigned.decorators = [
+    StoreDecorator({
+        user: {},
+    }),
+    NewDesignDecorator,
 ];

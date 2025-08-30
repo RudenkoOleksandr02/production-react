@@ -15,8 +15,8 @@ export default {
 
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Big = Template.bind({});
+Big.args = {
     src: AvatarImg,
 };
 

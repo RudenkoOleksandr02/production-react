@@ -1,17 +1,17 @@
 {
+  "All": "All",
+  "By": "By",
+  "Economics": "Economics",
   "Error loading articles": "",
   "Here you can search and view articles on various topics": "Here you can search and view articles on various topics",
-  "Search": "",
-  "Welcome to the articles page": "Welcome to the articles page",
-  "All": "All",
   "IT": "IT",
   "Science": "Science",
-  "Economics": "Economics",
-  "increasing": "increasing",
-  "descending": "descending",
-  "creation date": "creation date",
-  "title": "title",
-  "views": "views",
+  "Search": "",
   "Sort by": "Sort by",
-  "By": "By"
+  "Welcome to the articles page": "Welcome to the articles page",
+  "creation date": "creation date",
+  "descending": "descending",
+  "increasing": "increasing",
+  "title": "title",
+  "views": "views"
 }

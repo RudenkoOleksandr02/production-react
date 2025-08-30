@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Page } from './Page';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator';
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator';
 
 export default {
     title: 'widgets/Page',
@@ -19,3 +20,9 @@ export const Primary = Template.bind({});
 Primary.args = {
     children: 'Page',
 };
+
+export const PrimaryRedesigned = Template.bind({});
+PrimaryRedesigned.args = {
+    children: 'Page',
+};
+PrimaryRedesigned.decorators = [NewDesignDecorator];
