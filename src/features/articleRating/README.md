@@ -1,1 +1,0 @@
-## ArticleRating Feature
